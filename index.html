@@ -1,1400 +1,1732 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ziyan Kashif — Creative Designer & Digital Solutions</title>
+<title>Ziyan Kashif — Designer & Digital Solutions</title>
 
-  <meta name="description"
-    content="Ziyan Kashif is a freelance designer and digital solutions specialist offering web design, UI/UX, branding, graphic design, e-commerce, CRM, ERP and video editing.">
-  <meta name="keywords"
-    content="Ziyan Kashif, CreativeXol, freelance designer, web design, UI UX, branding, graphic design, CRM, ERP, e-commerce">
-  <meta name="author" content="Ziyan Kashif">
+<meta name="description"
+content="Ziyan Kashif is an independent designer and digital solutions specialist working across web design, UI/UX, branding, graphic design, e-commerce, CRM, ERP and video editing.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #080808;
-      --bg2: #0d0d0d;
-      --card: #111111;
-      --text: #f5f3ef;
-      --muted: #9b9b9b;
-      --line: rgba(255,255,255,.09);
-      --orange: #ff9d00;
-      --pink: #ff1493;
-      --yellow: #ffc400;
-      --max: 1180px;
-    }
+<style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+:root{
+    --bg:#070707;
+    --bg2:#0c0c0c;
+    --text:#f5f3ee;
+    --muted:#9b9b9b;
+    --soft:#171717;
 
-    html {
-      scroll-behavior: smooth;
-    }
+    --pink:#ff198f;
+    --orange:#ff7a00;
+    --yellow:#ffc400;
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
-      overflow-x: hidden;
-    }
+    --border:rgba(255,255,255,.08);
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    top:-350px;
+    right:-250px;
+
+    background:
+    radial-gradient(
         circle,
-        rgba(255,157,0,.09),
-        rgba(255,20,147,.035),
+        rgba(255,112,0,.10),
+        rgba(255,0,140,.04) 35%,
         transparent 70%
-      );
-      top: -250px;
-      right: -200px;
-      pointer-events: none;
-      z-index: -1;
-    }
+    );
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    filter:blur(30px);
+    pointer-events:none;
+    z-index:-2;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    bottom:-350px;
+    left:-250px;
 
-    .container {
-      width: min(var(--max), calc(100% - 48px));
-      margin: auto;
-    }
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,0,140,.08),
+        transparent 70%
+    );
 
-    /* NAV */
+    filter:blur(40px);
+    pointer-events:none;
+    z-index:-2;
+}
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 20px 0;
-      background: rgba(8,8,8,.72);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,.05);
-    }
 
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* =========================
+   HEADER
+========================= */
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: "Manrope", sans-serif;
-      font-weight: 800;
-      letter-spacing: -.04em;
-      font-size: 20px;
-    }
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
 
-    .brand img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-    }
+    padding:20px 5vw;
 
-    .brand span {
-      color: white;
-    }
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    .brand strong {
-      color: var(--orange);
-    }
+    background:rgba(7,7,7,.72);
+    backdrop-filter:blur(18px);
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      font-size: 14px;
-      color: #aaa;
-    }
+    /* NO BORDER / NO LINE */
+    border:none;
 
-    .nav-links a {
-      transition: .25s ease;
-    }
+    z-index:1000;
+}
 
-    .nav-links a:hover {
-      color: white;
-    }
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 
-    .nav-contact {
-      padding: 11px 18px;
-      border: 1px solid rgba(255,157,0,.4);
-      border-radius: 100px;
-      color: white !important;
-    }
+    text-decoration:none;
+    color:white;
+}
 
-    .nav-contact:hover {
-      background: var(--orange);
-      color: black !important;
-      border-color: var(--orange);
-    }
+.brand img{
+    width:38px;
+    height:38px;
+    object-fit:contain;
+    border-radius:9px;
+}
 
-    /* HERO */
+.brand-name{
+    font-family:"Manrope",sans-serif;
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:-.5px;
+}
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 150px 0 100px;
-      position: relative;
-    }
+.brand-name span{
+    color:var(--orange);
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 80px;
-      align-items: center;
-    }
+nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: #bbb;
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
+nav a{
+    position:relative;
 
-    .eyebrow::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--orange);
-      box-shadow: 0 0 18px var(--orange);
-    }
+    color:#a6a6a6;
+    text-decoration:none;
 
-    h1 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(54px, 7vw, 94px);
-      line-height: .94;
-      letter-spacing: -.065em;
-      font-weight: 800;
-      max-width: 900px;
-    }
+    font-size:14px;
+    font-weight:500;
 
-    h1 span {
-      background: linear-gradient(
+    transition:.3s ease;
+}
+
+nav a:hover{
+    color:white;
+}
+
+nav a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-7px;
+
+    width:0;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        var(--pink),
+        var(--orange)
+    );
+
+    transition:.3s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.header-btn{
+    padding:11px 19px;
+
+    border:1px solid rgba(255,170,0,.45);
+    border-radius:100px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.header-btn:hover{
+    background:linear-gradient(
+        90deg,
+        rgba(255,25,143,.14),
+        rgba(255,122,0,.14)
+    );
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    padding:
+        170px 7vw
+        100px;
+
+    display:grid;
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(350px,.85fr);
+
+    align-items:center;
+    gap:90px;
+
+    position:relative;
+}
+
+
+/* little ambient glow */
+
+.hero-glow{
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:12%;
+    top:15%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,145,0,.10),
+        transparent 65%
+    );
+
+    filter:blur(35px);
+
+    pointer-events:none;
+}
+
+
+/* eyebrow */
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#aaa;
+
+    font-size:12px;
+    font-weight:600;
+
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+}
+
+.eyebrow-dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--orange)
+    );
+
+    box-shadow:
+        0 0 18px rgba(255,90,0,.7);
+}
+
+
+/* MAIN HEADING */
+
+.hero h1{
+    max-width:850px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:
+        clamp(55px,7.2vw,105px);
+
+    line-height:.94;
+
+    letter-spacing:-5px;
+
+    font-weight:800;
+
+    margin-bottom:35px;
+}
+
+.hero h1 .white{
+    color:#f4f2ed;
+}
+
+.hero h1 .gradient{
+    display:inline-block;
+
+    background:
+    linear-gradient(
         100deg,
-        #ff1493,
-        #ff9d00,
-        #ffd000
-      );
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+        #ff168e,
+        #ff5a28 45%,
+        #ffb300
+    );
 
-    .hero-description {
-      max-width: 620px;
-      color: #aaa;
-      font-size: 18px;
-      line-height: 1.7;
-      margin: 30px 0;
-    }
+    -webkit-background-clip:text;
+    background-clip:text;
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+    color:transparent;
+}
 
-    .btn {
-      padding: 14px 22px;
-      border-radius: 100px;
-      border: 1px solid var(--line);
-      font-weight: 600;
-      font-size: 14px;
-      transition: .3s ease;
-    }
 
-    .btn-primary {
-      background: white;
-      color: black;
-    }
+/* DESCRIPTION */
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(255,255,255,.15);
-    }
+.hero-copy{
+    max-width:590px;
 
-    .btn-secondary {
-      color: white;
-    }
+    color:#a5a5a5;
 
-    .btn-secondary:hover {
-      border-color: var(--orange);
-      color: var(--orange);
-    }
+    font-size:17px;
+    line-height:1.8;
 
-    /* CREATIVE XOL CARD */
-
-    .identity-card {
-      position: relative;
-      min-height: 460px;
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(circle at 50% 20%, rgba(255,157,0,.13), transparent 40%),
-        #101010;
-      border-radius: 30px;
-      padding: 40px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    margin-bottom:38px;
+}
 
-    .identity-card::before {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border: 1px solid rgba(255,157,0,.18);
-      border-radius: 50%;
-      animation: rotate 18s linear infinite;
-    }
+.hero-copy strong{
+    color:#eee;
+    font-weight:600;
+}
 
-    .identity-card::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      border: 1px solid rgba(255,20,147,.14);
-      border-radius: 50%;
-      animation: rotate 13s linear infinite reverse;
-    }
 
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
+/* BUTTONS */
 
-    .identity-logo {
-      width: 220px;
-      position: relative;
-      z-index: 2;
-      filter: drop-shadow(0 20px 40px rgba(255,157,0,.18));
-      transition: .5s ease;
-    }
+.actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
 
-    .identity-card:hover .identity-logo {
-      transform: scale(1.06) rotate(-2deg);
-    }
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-    .floating-label {
-      position: absolute;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(20,20,20,.85);
-      backdrop-filter: blur(12px);
-      border-radius: 100px;
-      color: #bbb;
-      font-size: 11px;
-      z-index: 5;
-    }
+    padding:15px 23px;
 
-    .label-one {
-      top: 40px;
-      right: 30px;
-    }
+    border-radius:100px;
 
-    .label-two {
-      bottom: 40px;
-      left: 30px;
-    }
+    text-decoration:none;
 
-    /* MARQUEE */
-
-    .marquee {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      overflow: hidden;
-      padding: 17px 0;
-      background: #0b0b0b;
-    }
+    font-size:14px;
+    font-weight:700;
 
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 28s linear infinite;
-    }
+    transition:.35s ease;
+}
 
-    .marquee-item {
-      font-family: "Manrope", sans-serif;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: #777;
-      padding: 0 28px;
-      white-space: nowrap;
-    }
+.btn-primary{
+    color:#080808;
 
-    .marquee-item::after {
-      content: "✦";
-      color: var(--orange);
-      margin-left: 28px;
-    }
+    background:#f5f3ee;
+}
 
-    @keyframes marquee {
-      to {
-        transform: translateX(-50%);
-      }
-    }
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(255,255,255,.12);
+}
 
-    /* SECTIONS */
+.btn-secondary{
+    color:#eee;
 
-    section {
-      padding: 120px 0;
-    }
+    border:1px solid rgba(255,255,255,.12);
+    background:#0d0d0d;
+}
 
-    .section-head {
-      max-width: 750px;
-      margin-bottom: 55px;
-    }
+.btn-secondary:hover{
+    border-color:rgba(255,145,0,.5);
+    transform:translateY(-4px);
+}
 
-    .section-kicker {
-      color: var(--orange);
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
 
-    h2 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(40px, 5vw, 65px);
-      letter-spacing: -.055em;
-      line-height: 1;
-      margin-bottom: 20px;
-    }
+/* =========================
+   CREATIVE XOL CARD
+========================= */
 
-    .section-description {
-      color: #8d8d8d;
-      line-height: 1.7;
-      font-size: 17px;
-    }
+.hero-visual{
+    position:relative;
 
-    /* SERVICES */
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+    min-height:520px;
+}
 
-    .service {
-      padding: 30px;
-      min-height: 220px;
-      background: linear-gradient(145deg,#121212,#0d0d0d);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      transition: .35s ease;
-      position: relative;
-      overflow: hidden;
-    }
+.visual-orbit{
+    position:absolute;
 
-    .service::after {
-      content: "";
-      position: absolute;
-      width: 130px;
-      height: 130px;
-      right: -50px;
-      bottom: -50px;
-      background: radial-gradient(circle,rgba(255,157,0,.16),transparent 70%);
-      transition: .4s ease;
-    }
+    width:420px;
+    height:420px;
 
-    .service:hover {
-      transform: translateY(-7px);
-      border-color: rgba(255,157,0,.35);
-    }
+    border-radius:50%;
 
-    .service:hover::after {
-      transform: scale(1.5);
-    }
+    border:1px solid rgba(255,150,0,.13);
 
-    .service-number {
-      color: #555;
-      font-size: 12px;
-      margin-bottom: 45px;
-    }
+    animation:rotate 18s linear infinite;
+}
 
-    .service h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
+.visual-orbit::before{
+    content:"";
 
-    .service p {
-      color: #858585;
-      font-size: 14px;
-      line-height: 1.6;
-    }
+    position:absolute;
 
-    /* WORK */
+    width:8px;
+    height:8px;
 
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
+    border-radius:50%;
 
-    .project {
-      min-height: 420px;
-      border-radius: 26px;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid var(--line);
-      background: #111;
-      cursor: pointer;
-    }
+    background:#ff9500;
 
-    .project-visual {
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 35px;
-      transition: .5s ease;
-      background:
-        radial-gradient(circle at 50% 20%,rgba(255,157,0,.16),transparent 45%),
-        linear-gradient(145deg,#151515,#0c0c0c);
-    }
+    top:35px;
+    right:65px;
 
-    .project:hover .project-visual {
-      transform: scale(1.035);
-    }
+    box-shadow:0 0 20px #ff9500;
+}
 
-    .browser {
-      width: 90%;
-      height: 72%;
-      background: #f2f2f2;
-      border-radius: 13px;
-      overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0,0,0,.5);
-      transform: perspective(900px) rotateX(4deg) rotateY(-5deg);
-      transition: .5s ease;
-    }
+@keyframes rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
 
-    .project:hover .browser {
-      transform: perspective(900px) rotateX(0) rotateY(0) translateY(-8px);
-    }
+.logo-card{
+    width:360px;
+    height:430px;
 
-    .browser-top {
-      height: 30px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding-left: 12px;
-    }
+    position:relative;
 
-    .browser-top i {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #999;
-    }
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
-    .browser-content {
-      height: calc(100% - 30px);
-      display: grid;
-      grid-template-columns: 30% 70%;
-      color: #111;
-    }
+    border-radius:28px;
 
-    .browser-side {
-      background: #191919;
-    }
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.015)
+    );
 
-    .browser-main {
-      padding: 25px;
-    }
+    border:1px solid rgba(255,255,255,.09);
 
-    .fake-title {
-      width: 60%;
-      height: 16px;
-      background: #111;
-      margin-bottom: 18px;
-    }
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.6),
+        inset 0 1px rgba(255,255,255,.04);
 
-    .fake-line {
-      width: 85%;
-      height: 7px;
-      background: #ddd;
-      margin-bottom: 10px;
-    }
+    transition:.5s ease;
 
-    .project-info {
-      position: absolute;
-      left: 28px;
-      bottom: 25px;
-      z-index: 3;
-    }
+    overflow:hidden;
+}
 
-    .project-info span {
-      color: var(--orange);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
+.logo-card::before{
+    content:"";
 
-    .project-info h3 {
-      font-family: "Manrope", sans-serif;
-      font-size: 28px;
-      margin-top: 6px;
-    }
+    position:absolute;
 
-    /* ABOUT */
+    width:240px;
+    height:240px;
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 80px;
-      align-items: start;
-    }
+    border-radius:50%;
 
-    .about-card {
-      border: 1px solid var(--line);
-      background: #101010;
-      padding: 40px;
-      border-radius: 25px;
-    }
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,143,0,.18),
+        transparent 68%
+    );
 
-    .about-card p {
-      color: #999;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
+    filter:blur(20px);
+}
 
-    .about-list {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 12px;
-      margin-top: 30px;
-    }
+.logo-card:hover{
+    transform:
+        translateY(-10px)
+        rotateX(3deg)
+        rotateY(-3deg);
+
+    border-color:
+        rgba(255,155,0,.25);
+
+    box-shadow:
+        0 45px 100px rgba(0,0,0,.65),
+        0 0 60px rgba(255,100,0,.06);
+}
+
+.logo-card img{
+    position:relative;
+
+    width:235px;
+    height:235px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 20px 35px
+            rgba(255,100,0,.18)
+        );
+
+    transition:.5s ease;
+}
+
+.logo-card:hover img{
+    transform:scale(1.06);
+}
+
+.logo-label{
+    position:absolute;
+
+    bottom:28px;
+
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#777;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:120px 7vw;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    gap:30px;
+
+    margin-bottom:55px;
+}
+
+.section-kicker{
+    color:#888;
+
+    font-size:12px;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:13px;
+}
+
+.section-title{
+    font-family:"Manrope",sans-serif;
+
+    font-size:
+        clamp(38px,5vw,68px);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+}
+
+.section-title span{
+    color:#777;
+}
+
+.section-description{
+    max-width:400px;
+
+    color:#8e8e8e;
+
+    line-height:1.7;
+    font-size:14px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:14px;
+}
+
+.service{
+    min-height:190px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:#0d0d0d;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+}
+
+.service::after{
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    right:-80px;
+    bottom:-80px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,120,0,.12),
+        transparent 70%
+    );
+
+    transition:.5s ease;
+}
+
+.service:hover{
+    transform:translateY(-7px);
+
+    border-color:
+        rgba(255,150,0,.25);
+}
+
+.service:hover::after{
+    transform:scale(1.5);
+}
+
+.service-number{
+    color:#555;
+
+    font-size:12px;
+
+    margin-bottom:35px;
+}
+
+.service h3{
+    font-family:"Manrope",sans-serif;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#777;
+
+    font-size:13px;
+    line-height:1.6;
+}
+
 
-    .about-list div {
-      padding: 15px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      color: #aaa;
-      font-size: 13px;
+/* =========================
+   WORK
+========================= */
+
+.work-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+}
+
+.project{
+    min-height:440px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:#111;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    cursor:pointer;
+}
+
+.project-image{
+    width:100%;
+    height:100%;
+
+    min-height:440px;
+
+    object-fit:cover;
+
+    transition:
+        transform .8s cubic-bezier(.2,.7,.2,1),
+        filter .5s ease;
+}
+
+.project:hover .project-image{
+    transform:scale(1.07);
+
+    filter:
+        brightness(.72)
+        saturate(1.1);
+}
+
+.project-overlay{
+    position:absolute;
+
+    inset:0;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.85)
+    );
+
+    opacity:.95;
+}
+
+.project-type{
+    color:#aaa;
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.project h3{
+    font-family:"Manrope",sans-serif;
+
+    font-size:30px;
+
+    letter-spacing:-1px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:100px;
+
+    align-items:center;
+}
+
+.about-text{
+    color:#999;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+.about-text strong{
+    color:#eee;
+}
+
+.about-points{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+}
+
+.about-point{
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#0c0c0c;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:.3s ease;
+}
+
+.about-point:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(255,140,0,.25);
+}
+
+.about-point strong{
+    display:block;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:25px;
+
+    margin-bottom:6px;
+}
+
+.about-point span{
+    color:#777;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    text-align:center;
+
+    padding-top:150px;
+    padding-bottom:150px;
+}
+
+.contact h2{
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+    font-family:"Manrope",sans-serif;
+
+    font-size:
+        clamp(48px,7vw,90px);
+
+    line-height:.98;
+
+    letter-spacing:-4px;
+}
+
+.contact h2 span{
+    background:
+    linear-gradient(
+        90deg,
+        var(--pink),
+        var(--orange),
+        var(--yellow)
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.contact p{
+    color:#888;
+
+    max-width:520px;
+
+    margin:0 auto 35px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:35px 7vw;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    color:#666;
+
+    font-size:12px;
+
+    background:#050505;
+}
+
+.socials{
+    display:flex;
+    gap:20px;
+}
+
+.socials a{
+    color:#777;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+}
+
+.socials a:hover{
+    color:#fff;
+}
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
     }
+
+    .hero{
+        grid-template-columns:1fr;
+
+        padding-top:140px;
 
-    /* CONTACT */
-
-    .contact-box {
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 70px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 0%,rgba(255,157,0,.12),transparent 50%),
-        #101010;
+        gap:50px;
     }
 
-    .contact-box h2 {
-      max-width: 800px;
-      margin: 0 auto 25px;
+    .hero h1{
+        letter-spacing:-3px;
     }
 
-    .contact-box p {
-      color: #888;
-      max-width: 600px;
-      margin: auto auto 30px;
-      line-height: 1.7;
+    .hero-visual{
+        min-height:430px;
     }
 
-    .email {
-      display: inline-block;
-      margin-top: 20px;
-      color: var(--orange);
-      font-size: 17px;
-      font-weight: 600;
+    .services-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    /* FOOTER */
+    .about{
+        grid-template-columns:1fr;
 
-    footer {
-      padding: 35px 0;
-      border-top: 1px solid var(--line);
+        gap:50px;
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      align-items: center;
-    }
+}
 
-    .footer-copy {
-      color: #666;
-      font-size: 13px;
+@media(max-width:600px){
+
+    header{
+        padding:17px 5vw;
     }
 
-    .socials {
-      display: flex;
-      gap: 18px;
-      color: #777;
-      font-size: 13px;
+    .header-btn{
+        display:none;
     }
 
-    .socials a:hover {
-      color: var(--orange);
+    .hero{
+        padding-left:6vw;
+        padding-right:6vw;
     }
+
+    .hero h1{
+        font-size:54px;
 
-    /* REVEAL */
+        line-height:.97;
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(35px);
-      transition: .8s ease;
+        letter-spacing:-3px;
     }
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .hero-copy{
+        font-size:15px;
     }
 
-    /* MOBILE */
+    .visual-orbit{
+        width:330px;
+        height:330px;
+    }
 
-    @media(max-width: 850px) {
+    .logo-card{
+        width:290px;
+        height:360px;
+    }
 
-      .container {
-        width: min(100% - 30px, 600px);
-      }
+    .logo-card img{
+        width:190px;
+        height:190px;
+    }
 
-      .nav-links {
-        display: none;
-      }
+    section{
+        padding:90px 6vw;
+    }
 
-      .hero {
-        padding-top: 130px;
-      }
+    .section-head{
+        display:block;
+    }
 
-      .hero-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
+    .section-description{
+        margin-top:20px;
+    }
 
-      h1 {
-        font-size: clamp(50px, 14vw, 75px);
-      }
+    .services-grid,
+    .work-grid{
+        grid-template-columns:1fr;
+    }
 
-      .services {
-        grid-template-columns: 1fr;
-      }
+    .project,
+    .project-image{
+        min-height:380px;
+    }
 
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
+    .about-points{
+        grid-template-columns:1fr;
+    }
 
-      .identity-card {
-        min-height: 380px;
-      }
+    .contact h2{
+        letter-spacing:-3px;
+    }
 
-      section {
-        padding: 85px 0;
-      }
+    footer{
+        flex-direction:column;
 
-      .contact-box {
-        padding: 45px 25px;
-      }
+        gap:20px;
 
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+        text-align:center;
     }
-  </style>
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- NAV -->
 
-  <nav>
-    <div class="container nav-inner">
+<!-- =========================
+     HEADER
+========================= -->
 
-      <a href="#home" class="brand">
-        <img src="logo.png" alt="CreativeXol">
-        <span>Ziyan <strong>Kashif</strong></span>
-      </a>
+<header>
 
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-contact">Let's Talk</a>
-      </div>
+<a href="#" class="brand">
 
-    </div>
-  </nav>
+<img src="assets/creativexol-logo.png" alt="CreativeXol">
 
+<div class="brand-name">
+Ziyan <span>Kashif</span>
+</div>
 
-  <!-- HERO -->
+</a>
 
-  <main id="home">
 
-    <section class="hero">
-      <div class="container hero-grid">
+<nav>
 
-        <div class="reveal">
+<a href="#work">Work</a>
 
-          <div class="eyebrow">
-            Independent Designer · Digital Solutions
-          </div>
+<a href="#services">Services</a>
 
-          <h1>
-            I design digital
-            experiences that
-            <span>mean business.</span>
-          </h1>
+<a href="#about">About</a>
 
-          <p class="hero-description">
-            I'm Ziyan Kashif — a freelance designer and digital solutions
-            specialist helping businesses look better, communicate clearly,
-            and build stronger digital experiences.
-          </p>
+<a href="#contact">Contact</a>
 
-          <div class="hero-buttons">
-            <a href="#work" class="btn btn-primary">
-              View My Work
-            </a>
+</nav>
 
-            <a href="mailto:ziyan.creativexol@outlook.com"
-              class="btn btn-secondary">
-              Start a Project
-            </a>
-          </div>
 
-        </div>
+<a href="#contact" class="header-btn">
+Let's Talk
+</a>
 
+</header>
 
-        <div class="identity-card reveal">
 
-          <span class="floating-label label-one">
-            CreativeXol
-          </span>
 
-          <span class="floating-label label-two">
-            Design · Digital · Technology
-          </span>
+<!-- =========================
+     HERO
+========================= -->
 
-          <img
-            src="logo.png"
-            alt="CreativeXol Logo"
-            class="identity-logo"
-          >
+<main>
 
-        </div>
+<section class="hero">
 
-      </div>
-    </section>
+<div class="hero-glow"></div>
 
 
-    <!-- MARQUEE -->
+<div class="hero-content reveal">
 
-    <div class="marquee">
-      <div class="marquee-track">
+<div class="eyebrow">
 
-        <div class="marquee-item">Web Design</div>
-        <div class="marquee-item">UI / UX</div>
-        <div class="marquee-item">Brand Identity</div>
-        <div class="marquee-item">Graphic Design</div>
-        <div class="marquee-item">E-Commerce</div>
-        <div class="marquee-item">CRM</div>
-        <div class="marquee-item">ERP</div>
-        <div class="marquee-item">Video Editing</div>
+<span class="eyebrow-dot"></span>
 
-        <div class="marquee-item">Web Design</div>
-        <div class="marquee-item">UI / UX</div>
-        <div class="marquee-item">Brand Identity</div>
-        <div class="marquee-item">Graphic Design</div>
-        <div class="marquee-item">E-Commerce</div>
-        <div class="marquee-item">CRM</div>
-        <div class="marquee-item">ERP</div>
-        <div class="marquee-item">Video Editing</div>
+Independent Designer · Digital Solutions
 
-      </div>
-    </div>
+</div>
 
 
-    <!-- WORK -->
+<h1>
 
-    <section id="work">
+<span class="white">I design</span><br>
 
-      <div class="container">
+<span class="white">digital experiences</span><br>
 
-        <div class="section-head reveal">
+<span class="white">that </span>
 
-          <div class="section-kicker">
-            Selected Work
-          </div>
+<span class="gradient">move</span><br>
 
-          <h2>
-            Design that has a
-            <span>purpose.</span>
-          </h2>
+<span class="gradient">business forward.</span>
 
-          <p class="section-description">
-            A selection of digital, branding and visual work.
-            More projects and detailed case studies are being added.
-          </p>
+</h1>
 
-        </div>
 
+<p class="hero-copy">
 
-        <div class="work-grid">
+I'm <strong>Ziyan Kashif</strong> — an independent designer and digital solutions specialist working through <strong>CreativeXol</strong>.
 
-          <!-- PROJECT 01 -->
+I help businesses build stronger identities, better digital experiences and practical technology solutions.
 
-          <article class="project reveal">
+</p>
 
-            <div class="project-visual">
 
-              <div class="browser">
+<div class="actions">
 
-                <div class="browser-top">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
+<a href="#work" class="btn btn-primary">
+View My Work
+</a>
 
-                <div class="browser-content">
+<a href="#contact" class="btn btn-secondary">
+Start a Project
+</a>
 
-                  <div class="browser-side"></div>
+</div>
 
-                  <div class="browser-main">
+</div>
 
-                    <div class="fake-title"></div>
 
-                    <div class="fake-line"></div>
-                    <div class="fake-line"></div>
-                    <div class="fake-line"></div>
 
-                  </div>
+<div class="hero-visual reveal">
 
-                </div>
+<div class="visual-orbit"></div>
 
-              </div>
 
-            </div>
+<div class="logo-card">
 
-            <div class="project-info">
+<img
+src="assets/creativexol-logo.png"
+alt="CreativeXol Logo"
+>
 
-              <span>Web Design</span>
+<div class="logo-label">
+Design · Digital · Technology
+</div>
 
-              <h3>
-                Business Website
-              </h3>
+</div>
 
-            </div>
+</div>
 
-          </article>
+</section>
 
 
-          <!-- PROJECT 02 -->
 
-          <article class="project reveal">
+<!-- =========================
+     SERVICES
+========================= -->
 
-            <div class="project-visual"
-              style="
-                background:
-                radial-gradient(circle at 30% 30%,rgba(255,20,147,.15),transparent 40%),
-                linear-gradient(145deg,#151515,#0b0b0b);
-              ">
+<section id="services">
 
-              <img
-                src="logo.png"
-                alt="CreativeXol branding"
-                style="
-                  width:180px;
-                  filter:drop-shadow(0 20px 40px rgba(255,157,0,.18));
-                "
-              >
+<div class="section-head reveal">
 
-            </div>
+<div>
 
-            <div class="project-info">
+<div class="section-kicker">
+What I Do
+</div>
 
-              <span>Brand Identity</span>
+<h2 class="section-title">
+Built for <span>real business.</span>
+</h2>
 
-              <h3>
-                CreativeXol
-              </h3>
+</div>
 
-            </div>
+<p class="section-description">
 
-          </article>
+From visual identity to digital systems, I work across design and technology to create solutions that are useful, clear and built to last.
 
+</p>
 
-          <!-- PROJECT 03 -->
+</div>
 
-          <article class="project reveal">
 
-            <div class="project-visual">
 
-              <div style="
-                width:70%;
-                padding:35px;
-                background:#151515;
-                border:1px solid rgba(255,255,255,.1);
-                border-radius:20px;
-                box-shadow:0 30px 70px rgba(0,0,0,.45);
-              ">
+<div class="services-grid">
 
-                <div style="
-                  height:10px;
-                  width:35%;
-                  background:#ff9d00;
-                  margin-bottom:25px;
-                  border-radius:10px;
-                "></div>
 
-                <div style="
-                  display:grid;
-                  grid-template-columns:repeat(3,1fr);
-                  gap:12px;
-                ">
+<div class="service reveal">
 
-                  <div style="height:100px;background:#202020;border-radius:10px;"></div>
-                  <div style="height:100px;background:#202020;border-radius:10px;"></div>
-                  <div style="height:100px;background:#202020;border-radius:10px;"></div>
+<div class="service-number">01</div>
 
-                </div>
+<h3>Web Design</h3>
 
-              </div>
+<p>
+Modern websites designed around clarity, trust and conversion.
+</p>
 
-            </div>
+</div>
 
-            <div class="project-info">
 
-              <span>UI / UX</span>
+<div class="service reveal">
 
-              <h3>
-                Digital Interface
-              </h3>
+<div class="service-number">02</div>
 
-            </div>
+<h3>UI / UX Design</h3>
 
-          </article>
+<p>
+Thoughtful interfaces that make digital products easier to use.
+</p>
 
+</div>
 
-          <!-- PROJECT 04 -->
 
-          <article class="project reveal">
+<div class="service reveal">
 
-            <div class="project-visual">
+<div class="service-number">03</div>
 
-              <div style="
-                width:65%;
-                min-height:230px;
-                border-radius:18px;
-                padding:25px;
-                background:linear-gradient(145deg,#181818,#0e0e0e);
-                border:1px solid rgba(255,255,255,.1);
-                box-shadow:0 30px 70px rgba(0,0,0,.45);
-              ">
+<h3>Brand Identity</h3>
 
-                <div style="
-                  color:#ff9d00;
-                  font-size:11px;
-                  letter-spacing:.15em;
-                  margin-bottom:25px;
-                ">
-                  BUSINESS SYSTEM
-                </div>
+<p>
+Logos, visual systems and brand direction built for consistency.
+</p>
 
-                <div style="
-                  font-family:Manrope;
-                  font-size:25px;
-                  font-weight:800;
-                  margin-bottom:25px;
-                ">
-                  CRM / ERP
-                </div>
+</div>
 
-                <div style="
-                  height:7px;
-                  width:80%;
-                  background:#292929;
-                  margin-bottom:10px;
-                "></div>
 
-                <div style="
-                  height:7px;
-                  width:60%;
-                  background:#292929;
-                "></div>
+<div class="service reveal">
 
-              </div>
+<div class="service-number">04</div>
 
-            </div>
+<h3>Graphic Design</h3>
 
-            <div class="project-info">
+<p>
+Marketing visuals, social content, campaigns and business materials.
+</p>
 
-              <span>Digital Solutions</span>
+</div>
 
-              <h3>
-                CRM & ERP
-              </h3>
 
-            </div>
+<div class="service reveal">
 
-          </article>
+<div class="service-number">05</div>
 
-        </div>
+<h3>E-Commerce</h3>
 
-      </div>
+<p>
+Online stores designed to look professional and make buying easier.
+</p>
 
-    </section>
+</div>
 
 
-    <!-- SERVICES -->
+<div class="service reveal">
 
-    <section id="services">
+<div class="service-number">06</div>
 
-      <div class="container">
+<h3>ERP & CRM</h3>
 
-        <div class="section-head reveal">
+<p>
+Digital business systems that help teams manage customers and operations.
+</p>
 
-          <div class="section-kicker">
-            What I Do
-          </div>
+</div>
 
-          <h2>
-            From the first idea
-            to the final <span>pixel.</span>
-          </h2>
 
-          <p class="section-description">
-            Flexible digital services for businesses that want to
-            improve how they look, communicate and operate online.
-          </p>
+<div class="service reveal">
 
-        </div>
+<div class="service-number">07</div>
 
+<h3>Video Editing</h3>
 
-        <div class="services">
+<p>
+Short-form content, motion visuals and branded video experiences.
+</p>
 
-          <div class="service reveal">
-            <div class="service-number">01</div>
-            <h3>Web Design</h3>
-            <p>
-              Modern business websites focused on clarity,
-              trust, usability and conversion.
-            </p>
-          </div>
+</div>
 
-          <div class="service reveal">
-            <div class="service-number">02</div>
-            <h3>UI / UX Design</h3>
-            <p>
-              Clean digital interfaces designed around real
-              users and business goals.
-            </p>
-          </div>
 
-          <div class="service reveal">
-            <div class="service-number">03</div>
-            <h3>Brand Identity</h3>
-            <p>
-              Logos, visual systems and brand direction that
-              make businesses recognizable.
-            </p>
-          </div>
+<div class="service reveal">
 
-          <div class="service reveal">
-            <div class="service-number">04</div>
-            <h3>Graphic Design</h3>
-            <p>
-              Social media creatives, marketing graphics,
-              presentations and business visuals.
-            </p>
-          </div>
+<div class="service-number">08</div>
 
-          <div class="service reveal">
-            <div class="service-number">05</div>
-            <h3>Social Media</h3>
-            <p>
-              Visual content designed to communicate ideas
-              rather than simply fill a feed.
-            </p>
-          </div>
+<h3>Social Media Design</h3>
 
-          <div class="service reveal">
-            <div class="service-number">06</div>
-            <h3>E-Commerce</h3>
-            <p>
-              Professional online stores with clear product
-              presentation and user-friendly experiences.
-            </p>
-          </div>
+<p>
+Strategic visual content designed to communicate, educate and grow.
+</p>
 
-          <div class="service reveal">
-            <div class="service-number">07</div>
-            <h3>CRM Solutions</h3>
-            <p>
-              Digital systems that help businesses organize
-              leads, customers and daily workflows.
-            </p>
-          </div>
+</div>
 
-          <div class="service reveal">
-            <div class="service-number">08</div>
-            <h3>ERP Solutions</h3>
-            <p>
-              Business management solutions designed around
-              operational needs.
-            </p>
-          </div>
 
-          <div class="service reveal">
-            <div class="service-number">09</div>
-            <h3>Video Editing</h3>
-            <p>
-              Short-form videos, promotional edits and
-              motion-focused visual content.
-            </p>
-          </div>
+<div class="service reveal">
 
-          <div class="service reveal">
-            <div class="service-number">10</div>
-            <h3>AI Calling Agents</h3>
-            <p>
-              AI voice solutions for businesses and clinics.
-              Currently in development.
-            </p>
-          </div>
+<div class="service-number">09</div>
 
-        </div>
+<h3>AI Solutions</h3>
 
-      </div>
+<p>
+Practical AI-powered solutions designed around real business problems.
+</p>
 
-    </section>
+</div>
 
 
-    <!-- ABOUT -->
+</div>
 
-    <section id="about">
+</section>
 
-      <div class="container about-grid">
 
-        <div class="section-head reveal">
 
-          <div class="section-kicker">
-            About Me
-          </div>
+<!-- =========================
+     WORK
+========================= -->
 
-          <h2>
-            One person.
-            <br>
-            <span>Multiple disciplines.</span>
-          </h2>
+<section id="work">
 
-        </div>
+<div class="section-head reveal">
 
+<div>
 
-        <div class="about-card reveal">
+<div class="section-kicker">
+Selected Work
+</div>
 
-          <p>
-            I'm Ziyan Kashif, an independent freelancer working
-            across design, digital experiences and business technology.
-          </p>
+<h2 class="section-title">
+Work that <span>speaks.</span>
+</h2>
 
-          <p>
-            I work with businesses that need more than just
-            something that looks good. The goal is to create
-            work that communicates clearly and solves a real problem.
-          </p>
+</div>
 
-          <p>
-            CreativeXol is the creative identity behind my work,
-            while projects are handled directly with clients.
-          </p>
+<p class="section-description">
 
+A selection of design and digital projects. More work will be added as the portfolio grows.
 
-          <div class="about-list">
+</p>
 
-            <div>Web & Digital</div>
-            <div>UI / UX</div>
-            <div>Branding</div>
-            <div>Graphic Design</div>
-            <div>E-Commerce</div>
-            <div>CRM / ERP</div>
-            <div>Video Editing</div>
-            <div>AI Solutions</div>
+</div>
 
-          </div>
 
-        </div>
 
-      </div>
+<div class="work-grid">
 
-    </section>
 
+<!-- PROJECT 1 -->
 
-    <!-- CONTACT -->
+<div class="project reveal">
 
-    <section id="contact">
+<img
+class="project-image"
+src="assets/project-website.jpg"
+alt="Website Design Project"
+>
 
-      <div class="container">
+<div class="project-overlay">
 
-        <div class="contact-box reveal">
+<div class="project-type">
+Web Design · UI/UX
+</div>
 
-          <div class="section-kicker">
-            Have a project?
-          </div>
+<h3>Digital Experience</h3>
 
-          <h2>
-            Let's build something
-            <span>worth seeing.</span>
-          </h2>
+</div>
 
-          <p>
-            Tell me what you're working on, what problem you're
-            trying to solve, and where you want to take it.
-          </p>
+</div>
 
-          <a
-            href="mailto:ziyan.creativexol@outlook.com"
-            class="btn btn-primary"
-          >
-            Contact Me
-          </a>
 
-          <br>
 
-          <a
-            href="mailto:ziyan.creativexol@outlook.com"
-            class="email"
-          >
-            ziyan.creativexol@outlook.com
-          </a>
+<!-- PROJECT 2 -->
 
-        </div>
+<div class="project reveal">
 
-      </div>
+<img
+class="project-image"
+src="assets/project-branding.jpg"
+alt="Brand Identity Project"
+>
 
-    </section>
+<div class="project-overlay">
 
-  </main>
+<div class="project-type">
+Brand Identity
+</div>
 
+<h3>Visual Identity System</h3>
 
-  <!-- FOOTER -->
+</div>
 
-  <footer>
+</div>
 
-    <div class="container footer-inner">
 
-      <div class="footer-copy">
-        © 2026 Ziyan Kashif · CreativeXol
-      </div>
 
-      <div class="socials">
+<!-- PROJECT 3 -->
 
-        <!-- CHANGE THESE LINKS TO YOUR EXACT PROFILES -->
+<div class="project reveal">
 
-        <a
-          href="https://github.com/ziyankashif"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+<img
+class="project-image"
+src="assets/project-social.jpg"
+alt="Social Media Design"
+>
 
-        <a
-          href="https://www.linkedin.com/in/ziyankashif/"
-          target="_blank"
-          rel="noopener"
-        >
-          LinkedIn
-        </a>
+<div class="project-overlay">
 
-        <a
-          href="https://www.instagram.com/creativexol/"
-          target="_blank"
-          rel="noopener"
-        >
-          Instagram
-        </a>
+<div class="project-type">
+Social Media · Graphic Design
+</div>
 
-        <a
-          href="https://www.facebook.com/CreativeXol"
-          target="_blank"
-          rel="noopener"
-        >
-          Facebook
-        </a>
+<h3>Campaign Design</h3>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </footer>
 
 
-  <!-- SCROLL ANIMATION -->
+<!-- PROJECT 4 -->
 
-  <script>
+<div class="project reveal">
 
-    const observer = new IntersectionObserver(
-      entries => {
+<img
+class="project-image"
+src="assets/project-ecommerce.jpg"
+alt="E-commerce Project"
+>
 
-        entries.forEach(entry => {
+<div class="project-overlay">
 
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
+<div class="project-type">
+E-Commerce
+</div>
 
-        });
+<h3>Online Store Experience</h3>
 
-      },
-      {
-        threshold: .12
-      }
-    );
+</div>
 
+</div>
 
-    document
-      .querySelectorAll(".reveal")
-      .forEach(el => observer.observe(el));
 
+</div>
 
-  </script>
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="about">
+
+
+<div class="reveal">
+
+<div class="section-kicker">
+About Me
+</div>
+
+<h2 class="section-title">
+One designer.<br>
+Many <span>solutions.</span>
+</h2>
+
+</div>
+
+
+<div class="about-text reveal">
+
+<p>
+
+I'm <strong>Ziyan Kashif</strong>, an independent designer and digital solutions specialist.
+
+</p>
+
+<br>
+
+<p>
+
+Through <strong>CreativeXol</strong>, I work with businesses that need more than just something that looks good.
+
+The goal is simple: understand the problem, design the right solution and make the final result useful for the business.
+
+</p>
+
+<br>
+
+<p>
+
+I work with businesses across different industries and locations, with a focus on clean design, strong communication and practical digital solutions.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+<div class="reveal">
+
+<div class="section-kicker">
+Have a project?
+</div>
+
+<h2>
+
+Let's build something
+<span>worth remembering.</span>
+
+</h2>
+
+<p>
+
+Tell me what you're working on, what problem you're trying to solve, or simply what you want to improve.
+
+</p>
+
+
+<a
+href="mailto:ziyan.creativexol@outlook.com"
+class="btn btn-primary"
+>
+
+Start a Conversation →
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div>
+© 2026 Ziyan Kashif · CreativeXol
+</div>
+
+
+<div class="socials">
+
+<a
+href="https://www.instagram.com/creativexol/"
+target="_blank"
+>
+Instagram
+</a>
+
+<a
+href="https://www.facebook.com/CreativeXol"
+target="_blank"
+>
+Facebook
+</a>
+
+<a
+href="https://www.linkedin.com/"
+target="_blank"
+>
+LinkedIn
+</a>
+
+<a
+href="mailto:ziyan.creativexol@outlook.com"
+>
+Email
+</a>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+reveals.forEach(
+element => observer.observe(element)
+);
+
+
+/* =========================
+   MOUSE PARALLAX
+========================= */
+
+const visual =
+document.querySelector(".logo-card");
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+if(window.innerWidth < 900) return;
+
+const x =
+(e.clientX / window.innerWidth - .5);
+
+const y =
+(e.clientY / window.innerHeight - .5);
+
+visual.style.transform =
+`translate(${x * 8}px, ${y * 8}px)`;
+
+}
+);
+
+</script>
+
 
 </body>
 </html>
