@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ziyan Kashif — Digital Designer & Creative Technologist</title>
+
+  <meta name="description"
+    content="Ziyan Kashif is a freelance digital designer and creative technologist specializing in web design, UI/UX, branding, graphic design, e-commerce, CRM, ERP, video editing and AI solutions.">
+  <meta name="author" content="Ziyan Kashif">
+
+  <meta property="og:title" content="Ziyan Kashif — Digital Designer & Creative Technologist">
+  <meta property="og:description" content="Web, UI/UX, branding, digital solutions and AI.">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0a0a09;
+      color: #f4f1e9;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --bg: #0a0a09;
+      --surface: #11110f;
+      --surface-2: #171714;
+      --line: rgba(255,255,255,0.10);
+      --text: #f4f1e9;
+      --muted: #9d9a91;
+      --orange: #ff6a00;
+      --yellow: #ffbd32;
+      --max: 1240px;
+    }
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 11px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section {
+      padding: 130px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      max-width: 900px;
+      font-weight: 700;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 550px;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-top: 28px;
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    nav {
+      position: fixed;
+      z-index: 1000;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1160px, calc(100% - 32px));
+      padding: 13px 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10,10,9,0.75);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px 13px 9px 13px;
+      background:
+        linear-gradient(135deg, var(--orange), var(--yellow));
+      position: relative;
+      transform: rotate(-7deg);
+      box-shadow: 0 0 28px rgba(255,106,0,0.22);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: #0a0a09;
+      border-radius: 50%;
+      top: 7px;
+      left: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: #c4c0b7;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      transition: color .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-contact {
+      padding: 10px 17px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      font-size: 12px;
+      transition: .25s ease;
+    }
+
+    .nav-contact:hover {
+      background: white;
+      color: #111;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 170px;
+      padding-bottom: 100px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      opacity: .17;
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+      pointer-events: none;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      right: -260px;
+      top: 80px;
+      background: radial-gradient(circle,
+        rgba(255,106,0,.16),
+        rgba(255,106,0,.05) 35%,
+        transparent 70%);
+      filter: blur(15px);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      padding: 9px 14px;
+      font-size: 11px;
+      color: #bcb8af;
+      margin-bottom: 30px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #79d45b;
+      box-shadow: 0 0 15px rgba(121,212,91,.6);
+    }
+
+    .hero h1 {
+      font-size: clamp(62px, 10vw, 145px);
+      line-height: .83;
+      letter-spacing: -0.075em;
+      max-width: 1100px;
+      font-weight: 800;
+    }
+
+    .hero h1 .accent {
+      color: var(--orange);
+    }
+
+    .hero-description {
+      max-width: 620px;
+      margin-top: 38px;
+      color: #aaa69d;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 21px;
+      border-radius: 100px;
+      border: 1px solid var(--line);
+      font-size: 13px;
+      transition: all .3s ease;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #0a0a09;
+      border-color: var(--orange);
+      font-weight: 800;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(255,106,0,.20);
+    }
+
+    .btn-secondary {
+      color: #d0ccc3;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #111;
+      transform: translateY(-3px);
+    }
+
+    .hero-bottom {
+      margin-top: 110px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .hero-note {
+      max-width: 310px;
+      color: #79766e;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .hero-scroll {
+      color: #77746c;
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       MARQUEE
+    ========================================================= */
+
+    .marquee {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+      padding: 18px 0;
+      background: #0d0d0c;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      color: #8e8a82;
+      padding: 0 30px;
+      white-space: nowrap;
+    }
+
+    .marquee span b {
+      color: var(--orange);
+      margin-right: 30px;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* =========================================================
+       SELECTED WORK
+    ========================================================= */
+
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-bottom: 65px;
+    }
+
+    .work-count {
+      color: #68655e;
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      min-height: 530px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--surface);
+      position: relative;
+      transition: transform .45s ease, border-color .45s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,255,255,.20);
+    }
+
+    .project-large {
+      min-height: 650px;
+    }
+
+    .project-visual {
+      position: absolute;
+      inset: 0;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 30%,
+        rgba(0,0,0,.35) 55%,
+        rgba(0,0,0,.94) 100%
+      );
+    }
+
+    /* Website visual */
+
+    .browser {
+      position: absolute;
+      width: 78%;
+      left: 11%;
+      top: 11%;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f4f2ed;
+      box-shadow: 0 40px 90px rgba(0,0,0,.45);
+      transform: rotate(-3deg);
+      transition: transform .6s ease;
+    }
+
+    .project:hover .browser {
+      transform: rotate(0deg) translateY(-10px);
+    }
+
+    .browser-bar {
+      height: 26px;
+      background: #ddd9d0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-left: 10px;
+    }
+
+    .browser-dot {
+      width: 6px;
+      height: 6px;
+      background: #777;
+      border-radius: 50%;
+    }
+
+    .browser-body {
+      padding: 30px;
+      min-height: 330px;
+      color: #171714;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,150,40,.22), transparent 30%),
+        #f4f2ed;
+    }
+
+    .browser-body small {
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: 8px;
+    }
+
+    .browser-body h3 {
+      font-size: 35px;
+      line-height: .9;
+      letter-spacing: -.06em;
+      margin: 45px 0 20px;
+    }
+
+    .browser-line {
+      width: 120px;
+      height: 8px;
+      background: #222;
+      margin-bottom: 10px;
+    }
+
+    /* Brand visual */
+
+    .brand-visual {
+      position: absolute;
+      inset: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-card {
+      width: 70%;
+      aspect-ratio: 1;
+      background: #171714;
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 30px 30px 100px rgba(0,0,0,.5);
+      transform: rotate(5deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .brand-symbol {
+      width: 90px;
+      height: 90px;
+      border-radius: 30px 45px 30px 45px;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      transform: rotate(-10deg);
+    }
+
+    .brand-word {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    /* Dashboard */
+
+    .dashboard {
+      position: absolute;
+      width: 82%;
+      left: 9%;
+      top: 14%;
+      background: #151513;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 15px;
+      padding: 22px;
+      box-shadow: 0 40px 100px rgba(0,0,0,.55);
+      transform: perspective(900px) rotateY(-9deg) rotateX(3deg);
+      transition: .6s ease;
+    }
+
+    .project:hover .dashboard {
+      transform: perspective(900px) rotateY(0) rotateX(0) translateY(-10px);
+    }
+
+    .dash-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      font-size: 10px;
+      color: #85827a;
+    }
+
+    .dash-title {
+      color: #eeeae1;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .dash-cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .dash-card {
+      height: 70px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #1d1d1a;
+      padding: 12px;
+    }
+
+    .dash-card strong {
+      display: block;
+      font-size: 16px;
+      color: #eeeae1;
+    }
+
+    .dash-card span {
+      font-size: 8px;
+      color: #77746d;
+    }
+
+    .chart {
+      height: 110px;
+      margin-top: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background:
+        linear-gradient(160deg,
+          transparent 45%,
+          rgba(255,106,0,.8) 46%,
+          rgba(255,106,0,.8) 48%,
+          transparent 49%);
+    }
+
+    /* Video */
+
+    .video-visual {
+      position: absolute;
+      inset: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-frame {
+      width: 64%;
+      aspect-ratio: 9 / 14;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,.15);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,106,0,.55), transparent 28%),
+        linear-gradient(145deg,#161614,#050505);
+      box-shadow: 0 40px 100px rgba(0,0,0,.6);
+      position: relative;
+    }
+
+    .video-frame::before {
+      content: "CREATIVEXOL";
+      position: absolute;
+      top: 22px;
+      left: 20px;
+      font-size: 7px;
+      letter-spacing: .22em;
+      color: #ddd;
+    }
+
+    .video-frame::after {
+      content: "YOUR BRAND\nDESERVES BETTER.";
+      white-space: pre;
+      position: absolute;
+      left: 20px;
+      bottom: 25px;
+      font-size: 21px;
+      line-height: .9;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    /* Project content */
+
+    .project-info {
+      position: absolute;
+      z-index: 3;
+      left: 35px;
+      right: 35px;
+      bottom: 32px;
+    }
+
+    .project-number {
+      color: var(--orange);
+      font-size: 10px;
+      letter-spacing: .18em;
+      margin-bottom: 10px;
+    }
+
+    .project-info h3 {
+      font-size: 30px;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+    }
+
+    .project-info p {
+      color: #98958d;
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 420px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 100px;
+      font-size: 9px;
+      color: #aaa69d;
+    }
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services-list {
+      margin-top: 65px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 70px 1fr 2fr 40px;
+      gap: 25px;
+      align-items: center;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--line);
+      transition: padding .35s ease;
+    }
+
+    .service:hover {
+      padding-left: 12px;
+      padding-right: 12px;
+      background: rgba(255,255,255,.015);
+    }
+
+    .service-number {
+      color: #5f5c56;
+      font-size: 11px;
+    }
+
+    .service h3 {
+      font-size: 24px;
+      letter-spacing: -.04em;
+    }
+
+    .service p {
+      color: #817e76;
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+
+    .service-arrow {
+      color: var(--orange);
+      font-size: 20px;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .portrait {
+      min-height: 560px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 60% 35%, rgba(255,106,0,.18), transparent 30%),
+        linear-gradient(135deg,#181815,#0d0d0c);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portrait-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 35px;
+      background:
+        linear-gradient(to bottom, transparent 45%, rgba(0,0,0,.85));
+    }
+
+    .portrait-placeholder span {
+      color: #747169;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    .about-copy p {
+      color: #9c9890;
+      line-height: 1.8;
+      font-size: 16px;
+      margin-top: 25px;
+    }
+
+    .about-signature {
+      margin-top: 38px;
+      font-size: 13px;
+      color: #dedad1;
+    }
+
+    .about-signature span {
+      color: var(--orange);
+    }
+
+    /* =========================================================
+       AI PRODUCT
+    ========================================================= */
+
+    .ai-section {
+      background: #10100e;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ai-card {
+      margin-top: 60px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 24px;
+      min-height: 500px;
+      padding: 55px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 35%, rgba(255,106,0,.16), transparent 25%),
+        #0b0b0a;
+    }
+
+    .ai-card::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      right: -120px;
+      bottom: -160px;
+      border: 1px solid rgba(255,106,0,.25);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 50px rgba(255,106,0,.02),
+        0 0 0 100px rgba(255,106,0,.015);
+    }
+
+    .ai-label {
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,106,0,.3);
+      color: var(--orange);
+      font-size: 9px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .ai-card h3 {
+      font-size: clamp(38px, 5vw, 70px);
+      max-width: 650px;
+      line-height: .95;
+      letter-spacing: -.055em;
+      margin-top: 25px;
+    }
+
+    .ai-card p {
+      max-width: 570px;
+      color: #89867e;
+      line-height: 1.7;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .ai-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 30px;
+      max-width: 650px;
+    }
+
+    .ai-feature {
+      padding: 9px 12px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 100px;
+      color: #aaa69d;
+      font-size: 10px;
+    }
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      margin-top: 65px;
+      border-top: 1px solid var(--line);
+    }
+
+    .process {
+      padding: 30px 25px 30px 0;
+      border-right: 1px solid var(--line);
+      margin-right: 25px;
+    }
+
+    .process:last-child {
+      border-right: none;
+    }
+
+    .process-number {
+      color: var(--orange);
+      font-size: 11px;
+      margin-bottom: 55px;
+    }
+
+    .process h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .process p {
+      color: #77746d;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      padding: 150px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-big {
+      font-size: clamp(55px, 10vw, 135px);
+      line-height: .85;
+      letter-spacing: -.075em;
+      max-width: 1000px;
+    }
+
+    .contact-big span {
+      color: var(--orange);
+    }
+
+    .contact-sub {
+      max-width: 500px;
+      color: #85827a;
+      line-height: 1.7;
+      margin-top: 30px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-left {
+      color: #6f6c65;
+      font-size: 11px;
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 20px;
+      color: #8b877f;
+      font-size: 11px;
+    }
+
+    .footer-right a:hover {
+      color: white;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .container {
+        width: min(100% - 30px, var(--max));
+      }
+
+      .section {
+        padding: 90px 0;
+      }
+
+      .hero {
+        padding-top: 140px;
+      }
+
+      .hero h1 {
+        font-size: clamp(54px, 15vw, 100px);
+      }
+
+      .hero-bottom {
+        margin-top: 70px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project,
+      .project-large {
+        min-height: 560px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .portrait {
+        min-height: 430px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 35px;
+        margin-bottom: 15px;
+      }
+
+      .service {
+        grid-template-columns: 40px 1fr 30px;
+      }
+
+      .service p {
+        display: none;
+      }
+
+      .ai-card {
+        padding: 35px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      nav {
+        top: 10px;
+        width: calc(100% - 20px);
+      }
+
+      .nav-contact {
+        padding: 9px 12px;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        font-size: 61px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-bottom {
+        display: none;
+      }
+
+      .work-header {
+        display: block;
+      }
+
+      .work-count {
+        margin-top: 20px;
+      }
+
+      .project,
+      .project-large {
+        min-height: 500px;
+      }
+
+      .project-visual {
+        padding: 20px;
+      }
+
+      .browser {
+        width: 88%;
+        left: 6%;
+      }
+
+      .browser-body h3 {
+        font-size: 26px;
+      }
+
+      .project-info {
+        left: 23px;
+        right: 23px;
+        bottom: 23px;
+      }
+
+      .project-info h3 {
+        font-size: 25px;
+      }
+
+      .service {
+        grid-template-columns: 30px 1fr 20px;
+        gap: 10px;
+      }
+
+      .service h3 {
+        font-size: 19px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        border-right: none;
+      }
+
+      .ai-card {
+        min-height: 530px;
+        padding: 28px;
+      }
+
+      .contact {
+        padding: 100px 0 80px;
+      }
+
+      .contact-big {
+        font-size: 65px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav>
+    <a href="#top" class="nav-brand">
+      <span class="brand-mark"></span>
+      <span>Ziyan Kashif</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#ai">AI</a>
+    </div>
+
+    <a href="#contact" class="nav-contact">Let's talk ↗</a>
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main id="top">
+
+    <section class="hero">
+
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content reveal">
+
+        <div class="hero-kicker">
+          <span class="status-dot"></span>
+          Available for selected freelance projects
+        </div>
+
+        <h1>
+          Digital work<br>
+          with <span class="accent">purpose.</span>
+        </h1>
+
+        <p class="hero-description">
+          I'm <strong>Ziyan Kashif</strong> — a freelance digital designer
+          and creative technologist helping businesses build stronger
+          brands, better digital experiences, and practical digital solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">
+            Explore my work →
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Start a project
+          </a>
+        </div>
+
+        <div class="hero-bottom">
+
+          <p class="hero-note">
+            Working across web design, UI/UX, branding,
+            visual content, business systems and AI solutions.
+          </p>
+
+          <div class="hero-scroll">
+            Scroll to explore ↓
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         MARQUEE
+    ====================================================== -->
+
+    <div class="marquee">
+      <div class="marquee-track">
+
+        <span><b>✦</b> Web Design</span>
+        <span><b>✦</b> UI / UX</span>
+        <span><b>✦</b> Brand Identity</span>
+        <span><b>✦</b> Graphic Design</span>
+        <span><b>✦</b> Video Editing</span>
+        <span><b>✦</b> E-commerce</span>
+        <span><b>✦</b> CRM</span>
+        <span><b>✦</b> ERP</span>
+        <span><b>✦</b> AI Solutions</span>
+
+        <span><b>✦</b> Web Design</span>
+        <span><b>✦</b> UI / UX</span>
+        <span><b>✦</b> Brand Identity</span>
+        <span><b>✦</b> Graphic Design</span>
+        <span><b>✦</b> Video Editing</span>
+        <span><b>✦</b> E-commerce</span>
+        <span><b>✦</b> CRM</span>
+        <span><b>✦</b> ERP</span>
+        <span><b>✦</b> AI Solutions</span>
+
+      </div>
+    </div>
+
+
+    <!-- =====================================================
+         WORK
+    ====================================================== -->
+
+    <section class="section" id="work">
+
+      <div class="container">
+
+        <div class="work-header reveal">
+
+          <div>
+            <div class="eyebrow">01 — Selected work</div>
+
+            <h2 class="section-title">
+              Work that makes<br>
+              the idea visible.
+            </h2>
+
+            <p class="section-intro">
+              A selection of digital design, branding and business
+              solution concepts. Real client work will be added here
+              as the portfolio grows.
+            </p>
+          </div>
+
+          <div class="work-count">
+            Selected / 2026
+          </div>
+
+        </div>
+
+
+        <div class="work-grid">
+
+
+          <!-- PROJECT 01 -->
+
+          <article class="project project-large reveal">
+
+            <div class="project-visual">
+
+              <div class="browser">
+
+                <div class="browser-bar">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+
+                <div class="browser-body">
+
+                  <small>Digital experience</small>
+
+                  <h3>
+                    A better<br>
+                    first impression.
+                  </h3>
+
+                  <div class="browser-line"></div>
+                  <div class="browser-line" style="width:80px;"></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+
+              <div class="project-number">01 / Web Design</div>
+
+              <h3>Modern Business Website</h3>
+
+              <p>
+                A conversion-focused digital experience designed
+                to make a business easier to understand and trust.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Web Design</span>
+                <span class="tag">UI/UX</span>
+                <span class="tag">Responsive</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 02 -->
+
+          <article class="project reveal">
+
+            <div class="project-visual">
+
+              <div class="brand-visual">
+
+                <div class="brand-card">
+
+                  <div class="brand-symbol"></div>
+
+                  <div class="brand-word">
+                    CreativeXol
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+
+              <div class="project-number">02 / Brand Identity</div>
+
+              <h3>Brand System</h3>
+
+              <p>
+                A visual identity built around clarity,
+                recognition and consistent brand communication.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Identity</span>
+                <span class="tag">Logo</span>
+                <span class="tag">Visual System</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project reveal">
+
+            <div class="project-visual">
+
+              <div class="dashboard">
+
+                <div class="dash-top">
+                  <span>BUSINESS DASHBOARD</span>
+                  <span>2026</span>
+                </div>
+
+                <div class="dash-title">
+                  Business Overview
+                </div>
+
+                <div class="dash-cards">
+
+                  <div class="dash-card">
+                    <strong>248</strong>
+                    <span>Customers</span>
+                  </div>
+
+                  <div class="dash-card">
+                    <strong>84%</strong>
+                    <span>Retention</span>
+                  </div>
+
+                  <div class="dash-card">
+                    <strong>12.8k</strong>
+                    <span>Revenue</span>
+                  </div>
+
+                </div>
+
+                <div class="chart"></div>
+
+              </div>
+
+            </div>
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+
+              <div class="project-number">03 / Business Solutions</div>
+
+              <h3>CRM / ERP Interface</h3>
+
+              <p>
+                Clean business dashboards designed to turn
+                complicated information into useful decisions.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">CRM</span>
+                <span class="tag">ERP</span>
+                <span class="tag">Dashboard</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 04 -->
+
+          <article class="project project-large reveal">
+
+            <div class="project-visual">
+
+              <div class="video-visual">
+
+                <div class="video-frame"></div>
+
+              </div>
+
+            </div>
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+
+              <div class="project-number">04 / Motion & Video</div>
+
+              <h3>Social Motion Campaign</h3>
+
+              <p>
+                Short-form visual storytelling designed for
+                modern social platforms and digital campaigns.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Video Editing</span>
+                <span class="tag">Motion</span>
+                <span class="tag">Social</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="section" id="services">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">02 — What I offer</div>
+
+        <h2 class="section-title reveal">
+          From the first<br>
+          idea to the final screen.
+        </h2>
+
+        <p class="section-intro reveal">
+          Design and digital solutions built around what a
+          business actually needs — not a fixed template.
+        </p>
+
+
+        <div class="services-list">
+
+
+          <div class="service reveal">
+
+            <div class="service-number">01</div>
+
+            <h3>Web Design</h3>
+
+            <p>
+              Professional websites focused on clarity,
+              credibility, usability and conversion.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">02</div>
+
+            <h3>UI / UX Design</h3>
+
+            <p>
+              Interfaces that feel intuitive, modern and
+              purposeful across desktop and mobile.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">03</div>
+
+            <h3>Brand Identity</h3>
+
+            <p>
+              Logos, visual systems and brand direction
+              designed to create a consistent identity.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">04</div>
+
+            <h3>Graphic & Social</h3>
+
+            <p>
+              Social content, campaigns, marketing graphics
+              and visual communication.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">05</div>
+
+            <h3>Video Editing</h3>
+
+            <p>
+              Short-form video, motion graphics and visual
+              storytelling for digital campaigns.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">06</div>
+
+            <h3>E-commerce</h3>
+
+            <p>
+              Product-focused online experiences designed
+              around usability and customer journeys.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">07</div>
+
+            <h3>CRM & ERP</h3>
+
+            <p>
+              Business-focused interfaces and digital systems
+              for managing customers, operations and data.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+          <div class="service reveal">
+
+            <div class="service-number">08</div>
+
+            <h3>AI Solutions</h3>
+
+            <p>
+              Practical AI-powered products and automation
+              designed around real business workflows.
+            </p>
+
+            <div class="service-arrow">↗</div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="portrait reveal">
+
+            <!--
+              LATER:
+              Your real professional photo will go here.
+            -->
+
+            <div class="portrait-placeholder">
+
+              <span>
+                Ziyan Kashif / CreativeXol
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-copy reveal">
+
+            <div class="eyebrow">03 — About</div>
+
+            <h2 class="section-title">
+              A designer who thinks beyond the screen.
+            </h2>
+
+            <p>
+              I'm Ziyan Kashif, a freelance digital designer
+              working across design, technology and business
+              solutions.
+            </p>
+
+            <p>
+              My work ranges from websites and brand identities
+              to UI/UX, social content, e-commerce experiences,
+              CRM and ERP concepts, video, and emerging AI products.
+            </p>
+
+            <p>
+              I believe good creative work should solve something.
+              It should help a business communicate better,
+              build trust and make the next step easier.
+            </p>
+
+            <div class="about-signature">
+              Ziyan Kashif <span>—</span> CreativeXol
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AI PRODUCT
+    ====================================================== -->
+
+    <section class="section ai-section" id="ai">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          04 — Product in development
+        </div>
+
+        <h2 class="section-title reveal">
+          Building what<br>
+          comes next.
+        </h2>
+
+
+        <div class="ai-card reveal">
+
+          <span class="ai-label">
+            AI / Voice Product
+          </span>
+
+          <h3>
+            AI Calling Agent
+            for Clinics & Healthcare.
+          </h3>
+
+          <p>
+            A voice AI product currently being developed to
+            help clinics handle calls, answer routine questions,
+            collect information and support appointment-related
+            workflows.
+          </p>
+
+          <div class="ai-features">
+
+            <span class="ai-feature">Voice Conversations</span>
+            <span class="ai-feature">Clinic Workflows</span>
+            <span class="ai-feature">Call Handling</span>
+            <span class="ai-feature">Data Collection</span>
+            <span class="ai-feature">Automation</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+    ====================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="eyebrow reveal">
+          05 — How I work
+        </div>
+
+        <h2 class="section-title reveal">
+          Simple process.<br>
+          Serious result.
+        </h2>
+
+
+        <div class="process-grid">
+
+          <div class="process reveal">
+
+            <div class="process-number">01</div>
+
+            <h3>Understand</h3>
+
+            <p>
+              First I understand the business, audience,
+              problem and desired outcome.
+            </p>
+
+          </div>
+
+
+          <div class="process reveal">
+
+            <div class="process-number">02</div>
+
+            <h3>Plan</h3>
+
+            <p>
+              The idea becomes a clear creative direction,
+              structure and practical plan.
+            </p>
+
+          </div>
+
+
+          <div class="process reveal">
+
+            <div class="process-number">03</div>
+
+            <h3>Design</h3>
+
+            <p>
+              Visual systems, interfaces and experiences are
+              developed with purpose and consistency.
+            </p>
+
+          </div>
+
+
+          <div class="process reveal">
+
+            <div class="process-number">04</div>
+
+            <h3>Refine</h3>
+
+            <p>
+              Details are refined until the final result feels
+              clear, polished and ready to use.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container reveal">
+
+        <div class="eyebrow">
+          06 — Start a conversation
+        </div>
+
+        <h2 class="contact-big">
+          Have an idea?<br>
+          Let's make it <span>real.</span>
+        </h2>
+
+        <p class="contact-sub">
+          Whether you need a website, brand identity,
+          digital product, business system or creative solution,
+          tell me what you're working on.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="mailto:ziyan.kashif@outlook.com"
+            class="btn btn-primary">
+            Email Ziyan →
+          </a>
+
+          <a
+            href="mailto:ziyan.creativexol@outlook.com"
+            class="btn btn-secondary">
+            Contact CreativeXol
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-left">
+        © 2026 Ziyan Kashif. All rights reserved.
+      </div>
+
+      <div class="footer-right">
+
+        <!-- Replace # with your actual profiles later -->
+
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+
+        <span>CreativeXol</span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /*
+      Smooth reveal animation
+    */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+
+    /*
+      Small mouse movement effect
+      on hero glow
+    */
+
+    const glow =
+      document.querySelector(".hero-glow");
+
+    document.addEventListener("mousemove", (event) => {
+
+      if (!glow) return;
+
+      const x =
+        (event.clientX / window.innerWidth - 0.5) * 25;
+
+      const y =
+        (event.clientY / window.innerHeight - 0.5) * 25;
+
+      glow.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+    });
+
+  </script>
+
+</body>
+</html>
