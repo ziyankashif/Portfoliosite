@@ -1,1435 +1,1221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Ziyan Kashif Freelance Designer & Digital Solutions</title>
+  <title>Ziyan Kashif Freelance Designer & Digital Creative</title>
 
-<meta name="description"
-content="Ziyan Kashif is an independent freelance designer and digital solutions specialist working across web design, UI/UX, branding, graphic design, e-commerce, CRM, ERP and video editing.">
+  <meta
+    name="description"
+    content="Ziyan Kashif is a freelance designer and digital creative specializing in web design, UI/UX, branding, logo design, social media design, e-commerce, ERP, CRM and video editing."
+  />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="keywords"
+    content="Ziyan Kashif, freelance designer, web designer, UI UX designer, logo designer, branding, social media design, e-commerce, ERP, CRM, video editing, CreativeXol"
+  />
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="author" content="Ziyan Kashif" />
 
-<style>
+  <meta property="og:title" content="Ziyan Kashif — Freelance Designer" />
+  <meta
+    property="og:description"
+    content="Websites, branding, UI/UX and digital experiences designed to make businesses look better and work better."
+  />
+  <meta property="og:type" content="website" />
 
-:root{
-    --bg:#080808;
-    --bg2:#0d0d0d;
-    --text:#f5f4f1;
-    --muted:#999;
-    --line:rgba(255,255,255,.09);
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    --pink:#ff1685;
-    --orange:#ff6b22;
-    --yellow:#ffb000;
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-    --gradient:linear-gradient(135deg,#ff1685 0%,#ff5b28 48%,#ffb000 100%);
-}
+  <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    :root {
+      --bg: #08090b;
+      --bg-soft: #0d0f12;
+      --card: #111419;
+      --card-hover: #161a20;
 
-html{
-    scroll-behavior:smooth;
-}
+      --text: #f4f5f7;
+      --muted: #9da3ad;
+      --muted-2: #6f7680;
 
-body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"DM Sans",sans-serif;
-    overflow-x:hidden;
-}
+      --line: rgba(255,255,255,.09);
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+      --accent: #b8ff3d;
+      --accent-soft: rgba(184,255,61,.12);
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-::selection{
-    background:#ff4d4d;
-    color:white;
-}
-
-
-/* =========================
-   BACKGROUND
-========================= */
-
-body:before{
-    content:"";
-    position:fixed;
-    width:600px;
-    height:600px;
-    left:-250px;
-    top:100px;
-    background:radial-gradient(circle,
-        rgba(255,22,133,.13),
-        transparent 68%);
-    pointer-events:none;
-    z-index:-2;
-}
-
-body:after{
-    content:"";
-    position:fixed;
-    width:600px;
-    height:600px;
-    right:-250px;
-    top:500px;
-    background:radial-gradient(circle,
-        rgba(255,174,0,.10),
-        transparent 68%);
-    pointer-events:none;
-    z-index:-2;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 5vw;
-
-    background:rgba(8,8,8,.76);
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    z-index:1000;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-family:"Space Grotesk",sans-serif;
-    font-weight:700;
-    font-size:18px;
-}
-
-.brand img{
-    width:36px;
-    height:36px;
-    object-fit:contain;
-}
-
-.brand span{
-    color:#fff;
-}
-
-.brand strong{
-    background:var(--gradient);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.nav-links{
-    display:flex;
-    gap:34px;
-    align-items:center;
-}
-
-.nav-links a{
-    color:#a9a9a9;
-    font-size:14px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:white;
-}
-
-.nav-cta{
-    border:1px solid rgba(255,174,0,.6);
-    padding:11px 21px;
-    border-radius:30px;
-    font-size:13px;
-    transition:.3s;
-}
-
-.nav-cta:hover{
-    background:var(--gradient);
-    border-color:transparent;
-    color:white;
-    transform:translateY(-2px);
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:100vh;
-    padding:150px 7vw 100px;
-
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:80px;
-
-    position:relative;
-}
-
-.hero-content{
-    max-width:760px;
-}
-
-.eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    color:#b7b7b7;
-    font-size:12px;
-    letter-spacing:1.6px;
-    text-transform:uppercase;
-
-    margin-bottom:28px;
-}
-
-.eyebrow i{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#ffae00;
-    box-shadow:0 0 18px #ffae00;
-}
-
-.hero h1{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(55px,7vw,105px);
-    line-height:.92;
-    letter-spacing:-5px;
-    font-weight:700;
-    max-width:850px;
-}
-
-.gradient-text{
-    background:var(--gradient);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.hero-description{
-    max-width:610px;
-    color:#a8a8a8;
-    font-size:17px;
-    line-height:1.75;
-    margin-top:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    margin-top:38px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:15px 24px;
-    border-radius:50px;
-    font-size:14px;
-    font-weight:600;
-    transition:.35s;
-}
-
-.btn-primary{
-    background:white;
-    color:#080808;
-}
-
-.btn-primary:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 35px rgba(255,255,255,.15);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.18);
-    color:white;
-}
-
-.btn-outline:hover{
-    border-color:#ff7a00;
-    background:rgba(255,100,0,.07);
-    transform:translateY(-4px);
-}
-
-
-/* =========================
-   HERO VISUAL
-========================= */
-
-.hero-visual{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.visual-card{
-    width:min(440px,90vw);
-    aspect-ratio:1/1.08;
-
-    position:relative;
-
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:34px;
-
-    background:
-        radial-gradient(circle at 50% 40%,
-        rgba(255,160,0,.15),
-        transparent 42%),
-        #101010;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
-
-    transition:.5s;
-}
-
-.visual-card:hover{
-    transform:translateY(-10px) rotateX(2deg);
-    border-color:rgba(255,160,0,.4);
-    box-shadow:
-        0 35px 100px rgba(0,0,0,.7),
-        0 0 70px rgba(255,100,0,.08);
-}
-
-.visual-card:before{
-    content:"";
-    position:absolute;
-    width:78%;
-    height:78%;
-    border:1px solid rgba(255,166,0,.20);
-    border-radius:50%;
-    animation:spin 20s linear infinite;
-}
-
-.visual-card:after{
-    content:"";
-    position:absolute;
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#ffae00;
-    box-shadow:0 0 20px #ffae00;
-
-    top:16%;
-    right:15%;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-.logo-display{
-    width:58%;
-    max-width:260px;
-    position:relative;
-    z-index:2;
-
-    filter:drop-shadow(0 0 35px rgba(255,130,0,.18));
-
-    transition:.5s;
-}
-
-.visual-card:hover .logo-display{
-    transform:scale(1.06);
-}
-
-.visual-tag{
-    position:absolute;
-    bottom:28px;
-    left:28px;
-
-    padding:10px 15px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:30px;
-
-    background:rgba(0,0,0,.35);
-    backdrop-filter:blur(12px);
-
-    color:#aaa;
-    font-size:11px;
-    z-index:3;
-}
-
-
-/* =========================
-   SECTION
-========================= */
-
-section{
-    padding:130px 7vw;
-}
-
-.section-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    gap:30px;
-    margin-bottom:55px;
-}
-
-.section-label{
-    color:#ff9d00;
-    font-size:12px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.section-title{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(40px,5vw,70px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.section-intro{
-    max-width:450px;
-    color:#8d8d8d;
-    line-height:1.7;
-}
-
-
-/* =========================
-   WORK
-========================= */
-
-.work-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.project{
-    position:relative;
-    overflow:hidden;
-    border-radius:22px;
-    background:#111;
-    border:1px solid rgba(255,255,255,.08);
-    min-height:330px;
-    cursor:pointer;
-}
-
-.project img{
-    width:100%;
-    height:100%;
-    min-height:330px;
-    object-fit:cover;
-    transition:.7s cubic-bezier(.2,.7,.2,1);
-}
-
-.project:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.9),
-        transparent 55%
-    );
-    opacity:.65;
-}
-
-.project-info{
-    position:absolute;
-    bottom:25px;
-    left:25px;
-    z-index:3;
-}
-
-.project-info small{
-    color:#ff9e00;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-}
-
-.project-info h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:24px;
-    margin-top:7px;
-}
-
-.project:hover img{
-    transform:scale(1.08);
-}
-
-.project:hover{
-    border-color:rgba(255,145,0,.35);
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    border-top:1px solid var(--line);
-}
-
-.service{
-    padding:42px 35px;
-    border-bottom:1px solid var(--line);
-    border-right:1px solid var(--line);
-
-    transition:.35s;
-}
-
-.service:nth-child(even){
-    border-right:none;
-}
-
-.service-number{
-    color:#777;
-    font-size:12px;
-}
-
-.service h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:28px;
-    margin:18px 0 12px;
-}
-
-.service p{
-    color:#8e8e8e;
-    line-height:1.7;
-    max-width:500px;
-}
-
-.service:hover{
-    background:linear-gradient(
-        135deg,
-        rgba(255,20,130,.06),
-        rgba(255,150,0,.04)
-    );
-}
-
-.service:hover h3{
-    background:var(--gradient);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:100px;
-    align-items:center;
-}
-
-.about-title{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(42px,5vw,72px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.about-text{
-    color:#999;
-    font-size:17px;
-    line-height:1.85;
-}
-
-.about-text p+p{
-    margin-top:20px;
-}
-
-.about-points{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-    margin-top:35px;
-}
-
-.point{
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:20px;
-    color:#bbb;
-}
-
-.point strong{
-    display:block;
-    color:white;
-    margin-bottom:5px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    text-align:center;
-    padding-bottom:160px;
-}
-
-.contact h2{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(50px,7vw,100px);
-    line-height:.95;
-    letter-spacing:-5px;
-}
-
-.contact p{
-    color:#888;
-    max-width:600px;
-    margin:25px auto 35px;
-    line-height:1.7;
-}
-
-.contact-email{
-    display:inline-block;
-    font-size:20px;
-    margin-top:25px;
-    color:#fff;
-    border-bottom:1px solid #555;
-    padding-bottom:8px;
-    transition:.3s;
-}
-
-.contact-email:hover{
-    color:#ff9b00;
-    border-color:#ff9b00;
-}
-
-
-/* =========================
-   SOCIAL
-========================= */
-
-.socials{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-top:50px;
-}
-
-.socials a{
-    color:#888;
-    font-size:14px;
-    transition:.3s;
-}
-
-.socials a:hover{
-    color:white;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    border-top:1px solid var(--line);
-    padding:28px 7vw;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    color:#666;
-    font-size:12px;
-}
-
-.footer-brand{
-    color:#999;
-}
-
-.footer-brand strong{
-    color:#ff9b00;
-}
-
-
-/* =========================
-   REVEAL
-========================= */
-
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:1s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    .nav-links{
-        display:none;
+      --radius: 24px;
+      --max: 1180px;
     }
 
-    nav{
-        padding:0 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .hero{
-        grid-template-columns:1fr;
-        padding:130px 25px 80px;
-        gap:55px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero h1{
-        font-size:clamp(50px,14vw,82px);
-        letter-spacing:-4px;
+    body {
+      background:
+        radial-gradient(circle at 80% 10%, rgba(184,255,61,.07), transparent 25%),
+        radial-gradient(circle at 10% 55%, rgba(184,255,61,.035), transparent 25%),
+        var(--bg);
+
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .hero-description{
-        font-size:15px;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+      z-index: -2;
     }
 
-    section{
-        padding:90px 25px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .section-top{
-        display:block;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .section-intro{
-        margin-top:20px;
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
     }
 
-    .work-grid{
-        grid-template-columns:1fr;
+    /* ================= NAV ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      background: rgba(8,9,11,.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.04);
     }
 
-    .project{
-        min-height:300px;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .project img{
-        min-height:300px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -.5px;
     }
 
-    .services{
-        grid-template-columns:1fr;
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
     }
 
-    .service{
-        border-right:none;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
 
-    .about{
-        grid-template-columns:1fr;
-        gap:45px;
+    .nav-links a {
+      color: #aeb4bd;
+      font-size: 14px;
+      transition: .25s ease;
     }
 
-    .contact h2{
-        letter-spacing:-3px;
+    .nav-links a:hover {
+      color: white;
     }
 
-    footer{
-        padding:25px;
-        flex-direction:column;
-        gap:10px;
+    .nav-talk {
+      padding: 10px 17px;
+      border: 1px solid rgba(184,255,61,.5);
+      border-radius: 100px;
+      color: var(--accent) !important;
     }
-}
 
-</style>
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow span {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 18px var(--accent);
+    }
+
+    h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(48px, 6.4vw, 82px);
+      line-height: .98;
+      letter-spacing: -4px;
+      max-width: 850px;
+    }
+
+    h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero-text {
+      margin-top: 28px;
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0c08;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 35px rgba(184,255,61,.18);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: white;
+      background: rgba(255,255,255,.025);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(184,255,61,.4);
+      transform: translateY(-3px);
+    }
+
+    /* ================= PROFILE ================= */
+
+    .profile-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-card {
+      width: min(330px, 100%);
+      position: relative;
+      padding: 12px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.09);
+      transform: rotate(2deg);
+      transition: .5s ease;
+    }
+
+    .profile-card:hover {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .profile-image {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 23px;
+      background: #15171b;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s ease;
+    }
+
+    .profile-card:hover .profile-image img {
+      transform: scale(1.05);
+    }
+
+    .profile-label {
+      position: absolute;
+      bottom: 26px;
+      left: 25px;
+      right: 25px;
+      padding: 13px 16px;
+      border-radius: 14px;
+      background: rgba(8,9,11,.75);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .profile-label strong {
+      display: block;
+      font-family: "Manrope";
+    }
+
+    .profile-label small {
+      color: var(--muted);
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(34px, 4vw, 55px);
+      letter-spacing: -2.5px;
+      line-height: 1.05;
+    }
+
+    .section-description {
+      color: var(--muted);
+      margin-top: 16px;
+      font-size: 16px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-title {
+      font-family: "Manrope";
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .about-copy p + p {
+      margin-top: 18px;
+    }
+
+    .about-facts {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .fact {
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+      border-radius: 16px;
+    }
+
+    .fact strong {
+      font-family: "Manrope";
+      font-size: 25px;
+      display: block;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .service {
+      padding: 29px;
+      min-height: 220px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+      transition: .35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -50px;
+      bottom: -50px;
+      background: var(--accent);
+      filter: blur(65px);
+      opacity: 0;
+      transition: .35s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+      background: var(--card-hover);
+      border-color: rgba(184,255,61,.28);
+    }
+
+    .service:hover::after {
+      opacity: .14;
+    }
+
+    .service-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .service h3 {
+      margin-top: 35px;
+      font-family: "Manrope";
+      font-size: 21px;
+    }
+
+    .service p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ================= WORK ================= */
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+    .work {
+      position: relative;
+      overflow: hidden;
+      min-height: 390px;
+      border-radius: 25px;
+      background: #111318;
+      border: 1px solid var(--line);
+    }
+
+    .work img {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      object-fit: cover;
+      transition: .6s ease;
+    }
+
+    .work:hover img {
+      transform: scale(1.045);
+    }
+
+    .work-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 70px 27px 25px;
+      background: linear-gradient(transparent, rgba(0,0,0,.88));
+    }
+
+    .work-overlay span {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .work-overlay h3 {
+      margin-top: 5px;
+      font-family: "Manrope";
+      font-size: 24px;
+    }
+
+    .work-overlay p {
+      color: #c4c8ce;
+      font-size: 13px;
+    }
+
+    /* ================= PROCESS ================= */
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-step {
+      padding: 30px 25px;
+      border-right: 1px solid var(--line);
+    }
+
+    .process-step:last-child {
+      border-right: 0;
+    }
+
+    .process-step span {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      margin-top: 22px;
+      font-family: "Manrope";
+      font-size: 19px;
+    }
+
+    .process-step p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      padding: 70px;
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(184,255,61,.12), transparent 30%),
+        rgba(255,255,255,.025);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 18px auto 30px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-copy {
+      color: var(--muted-2);
+      font-size: 13px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      color: var(--muted);
+      font-size: 13px;
+      transition: .25s ease;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width: 900px) {
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .profile-wrap {
+        justify-content: flex-start;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process-step:nth-child(2) {
+        border-right: 0;
+      }
+
+      .process-step:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+    }
+
+    @media(max-width: 650px) {
+
+      .container {
+        width: min(var(--max), calc(100% - 28px));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -2.7px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .services-grid,
+      .work-grid,
+      .about-facts,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .process-step:last-child {
+        border-bottom: 0;
+      }
+
+      .work,
+      .work img {
+        min-height: 320px;
+      }
+
+      .contact-box {
+        padding: 45px 25px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
 </head>
-
 
 <body>
 
+  <!-- ================= HEADER ================= -->
 
-<!-- ================= NAV ================= -->
+  <header>
+    <div class="container nav">
 
-<nav>
+      <a href="#home" class="brand">
+        <img src="assets/creativexol-logo.png" alt="CreativeXol logo">
+        <span>ZIYAN KASHIF</span>
+      </a>
 
-<a href="#top" class="brand">
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact" class="nav-talk">Let's Talk</a>
+      </nav>
 
-<img src="logo.assets/creativexol-logo.png"
-     alt="CreativeXol Logo">
+    </div>
+  </header>
 
-<span>Ziyan <strong>Kashif</strong></span>
 
-</a>
+  <!-- ================= HERO ================= -->
 
+  <main>
 
-<div class="nav-links">
+    <section class="hero" id="home">
 
-<a href="#work">Work</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+      <div class="container hero-grid">
 
-</div>
+        <div>
 
+          <div class="eyebrow">
+            <span></span>
+            Freelance Designer & Digital Creative
+          </div>
 
-<a
-class="nav-cta"
-href="mailto:ziyan.kashif@outlook.com?subject=Project%20Inquiry%20—%20Ziyan%20Kashif"
->
-Let's Talk
-</a>
+          <h1>
+            I design digital experiences
+            <span class="accent">people remember.</span>
+          </h1>
 
-</nav>
+          <p class="hero-text">
+            I'm Ziyan Kashif a freelance designer working across web design,
+            UI/UX, branding and digital content. I help businesses turn
+            ordinary ideas into clear, professional and memorable digital experiences.
+          </p>
 
+          <div class="hero-actions">
 
+            <a
+              class="btn btn-primary"
+              href="mailto:ziyan.creativexol@outlook.com?subject=Start%20a%20Project%20with%20Ziyan"
+            >
+              Start a Project →
+            </a>
 
-<!-- ================= HERO ================= -->
+            <a class="btn btn-secondary" href="#work">
+              View My Work
+            </a>
 
-<main id="top">
+          </div>
 
-<section class="hero">
+        </div>
 
-<div class="hero-content reveal">
 
-<div class="eyebrow">
-<i></i>
-Independent Designer · Digital Solutions
-</div>
+        <div class="profile-wrap">
 
+          <div class="profile-card">
 
-<h1>
+            <div class="profile-image">
+              <img
+                src="assets/ziyan-photo.jpg"
+                alt="Ziyan Kashif"
+              >
+            </div>
 
-I design
+            <div class="profile-label">
+              <strong>Ziyan Kashif</strong>
+              <small>Designer • CreativeXol</small>
+            </div>
 
-<br>
+          </div>
 
-digital experiences
+        </div>
 
-<br>
+      </div>
 
-that <span class="gradient-text">move</span>
+    </section>
 
-<br>
 
-business forward.
+    <!-- ================= ABOUT ================= -->
 
-</h1>
+    <section id="about">
 
+      <div class="container">
 
-<p class="hero-description">
+        <div class="about-grid">
 
-I'm <strong>Ziyan Kashif</strong> an independent freelance designer and digital solutions specialist helping businesses build stronger brands, better digital experiences and clearer customer journeys.
+          <div>
 
-</p>
+            <div class="section-kicker">About Me</div>
 
+            <div class="about-title">
+              Design should solve problems,
+              not just look good.
+            </div>
 
-<div class="hero-buttons">
+          </div>
 
-<a href="#work" class="btn btn-primary">
-View My Work
-</a>
+          <div class="about-copy">
 
-<a
-href="mailto:ziyan.kashif@outlook.com?subject=I%20Want%20to%20Start%20a%20Project"
-class="btn btn-outline"
->
-Start a Project
-</a>
+            <p>
+              I'm Ziyan Kashif, a freelance designer and the creative behind
+              CreativeXol. I work with businesses that want their digital
+              presence to feel more professional, clear and trustworthy.
+            </p>
 
-</div>
+            <p>
+              My work combines visual design, business thinking and modern
+              digital experiences — from a complete website or brand identity
+              to social media content and digital products.
+            </p>
 
-</div>
+            <p>
+              CreativeXol is the brand I use for my creative work, while I
+              personally work with clients as a freelancer.
+            </p>
 
+            <div class="about-facts">
 
+              <div class="fact">
+                <strong>01</strong>
+                <span>Design-first thinking</span>
+              </div>
 
-<div class="hero-visual reveal">
+              <div class="fact">
+                <strong>02</strong>
+                <span>Business-focused work</span>
+              </div>
 
-<div class="visual-card">
+              <div class="fact">
+                <strong>03</strong>
+                <span>Remote worldwide</span>
+              </div>
 
-<img
-src="logo.assets/creativexol-logo.png"
-alt="CreativeXol"
-class="logo-display"
->
+            </div>
 
-<div class="visual-tag">
-Design · Digital · Technology
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
 
+    <!-- ================= SERVICES ================= -->
 
-<!-- ================= WORK ================= -->
+    <section id="services">
 
-<section id="work">
+      <div class="container">
 
-<div class="section-top reveal">
+        <div class="section-head">
 
-<div>
+          <div class="section-kicker">What I Do</div>
 
-<div class="section-label">
-Selected Work
-</div>
+          <h2>
+            From first impression
+            to complete digital experience.
+          </h2>
 
-<h2 class="section-title">
-Built to be<br>
-noticed.
-</h2>
+          <p class="section-description">
+            A flexible set of creative and digital services for businesses
+            that want to look better, communicate better and grow online.
+          </p>
 
-</div>
+        </div>
 
-<p class="section-intro">
-A selection of branding, web, UI/UX, graphic design and digital work created for different business needs.
-</p>
 
-</div>
+        <div class="services-grid">
 
+          <article class="service">
+            <span class="service-number">01</span>
+            <h3>Web Design</h3>
+            <p>Modern, responsive websites designed around clarity, trust and conversion.</p>
+          </article>
 
+          <article class="service">
+            <span class="service-number">02</span>
+            <h3>UI / UX Design</h3>
+            <p>Clean interfaces and user experiences that make digital products easier to use.</p>
+          </article>
 
-<div class="work-grid reveal">
+          <article class="service">
+            <span class="service-number">03</span>
+            <h3>Branding</h3>
+            <p>Visual identities that give businesses a consistent and professional presence.</p>
+          </article>
 
+          <article class="service">
+            <span class="service-number">04</span>
+            <h3>Logo Design</h3>
+            <p>Distinctive logos created to work across digital and real-world applications.</p>
+          </article>
 
-<!-- PROJECT 1 -->
+          <article class="service">
+            <span class="service-number">05</span>
+            <h3>Social Media Design</h3>
+            <p>Professional social content designed to communicate ideas instead of simply filling a feed.</p>
+          </article>
 
-<a class="project"
-href="#contact">
+          <article class="service">
+            <span class="service-number">06</span>
+            <h3>Graphic Design</h3>
+            <p>Marketing visuals, promotional graphics, presentations and branded assets.</p>
+          </article>
 
-<img
-src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
-alt="Brand identity project"
->
+          <article class="service">
+            <span class="service-number">07</span>
+            <h3>E-Commerce Stores</h3>
+            <p>Product-focused online stores designed for a smoother shopping experience.</p>
+          </article>
 
-<div class="project-info">
+          <article class="service">
+            <span class="service-number">08</span>
+            <h3>ERP & CRM</h3>
+            <p>Business-focused digital systems and interfaces designed around real workflows.</p>
+          </article>
 
-<small>Brand Identity</small>
+          <article class="service">
+            <span class="service-number">09</span>
+            <h3>Video Editing</h3>
+            <p>Short-form and promotional video editing with clean pacing, motion and visual storytelling.</p>
+          </article>
 
-<h3>Visual Systems</h3>
+        </div>
 
-</div>
+      </div>
 
-</a>
+    </section>
 
 
+    <!-- ================= WORK ================= -->
 
-<!-- PROJECT 2 -->
+    <section id="work">
 
-<a class="project"
-href="#contact">
+      <div class="container">
 
-<img
-src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=85"
-alt="Website design project"
->
+        <div class="section-head">
 
-<div class="project-info">
+          <div class="section-kicker">Selected Work</div>
 
-<small>Web Design</small>
+          <h2>
+            A few things I've
+            designed and built.
+          </h2>
 
-<h3>Digital Experiences</h3>
+          <p class="section-description">
+            A selection of creative work across websites, branding,
+            UI/UX, social media and digital design.
+          </p>
 
-</div>
+        </div>
 
-</a>
 
+        <div class="work-grid">
 
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-01.jpg" alt="Web design project">
+            <div class="work-overlay">
+              <span>Web Design</span>
+              <h3>Digital Experience</h3>
+              <p>Modern website concept focused on clarity and conversion.</p>
+            </div>
+          </a>
 
-<!-- PROJECT 3 -->
 
-<a class="project"
-href="#contact">
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-02.jpg" alt="Brand identity project">
+            <div class="work-overlay">
+              <span>Brand Identity</span>
+              <h3>Visual Identity</h3>
+              <p>A cohesive visual system designed for a modern business.</p>
+            </div>
+          </a>
 
-<img
-src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85"
-alt="Graphic design project"
->
 
-<div class="project-info">
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-03.jpg" alt="UI UX project">
+            <div class="work-overlay">
+              <span>UI / UX</span>
+              <h3>Product Interface</h3>
+              <p>Interface design focused on usability and visual hierarchy.</p>
+            </div>
+          </a>
 
-<small>Graphic Design</small>
 
-<h3>Visual Communication</h3>
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-04.jpg" alt="Social media design project">
+            <div class="work-overlay">
+              <span>Social Media</span>
+              <h3>Content System</h3>
+              <p>Branded social content designed for consistency and attention.</p>
+            </div>
+          </a>
 
-</div>
 
-</a>
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-05.jpg" alt="Logo design project">
+            <div class="work-overlay">
+              <span>Logo Design</span>
+              <h3>Brand Mark</h3>
+              <p>A memorable identity designed to work across multiple formats.</p>
+            </div>
+          </a>
 
 
+          <a class="work" href="#" onclick="return false;">
+            <img src="assets/work-06.jpg" alt="E commerce design project">
+            <div class="work-overlay">
+              <span>E-Commerce</span>
+              <h3>Online Store</h3>
+              <p>A product-first shopping experience with clean visual hierarchy.</p>
+            </div>
+          </a>
 
-<!-- PROJECT 4 -->
+        </div>
 
-<a class="project"
-href="#contact">
+      </div>
 
-<img
-src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
-alt="UI UX design project"
->
+    </section>
 
-<div class="project-info">
 
-<small>UI / UX</small>
+    <!-- ================= PROCESS ================= -->
 
-<h3>Product Interfaces</h3>
+    <section>
 
-</div>
+      <div class="container">
 
-</a>
+        <div class="section-head">
 
+          <div class="section-kicker">How I Work</div>
 
+          <h2>
+            Simple process.
+            Serious attention to detail.
+          </h2>
 
-<!-- PROJECT 5 -->
+        </div>
 
-<a class="project"
-href="#contact">
 
-<img
-src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1200&q=85"
-alt="Creative project"
->
+        <div class="process">
 
-<div class="project-info">
+          <div class="process-step">
+            <span>01 / DISCOVER</span>
+            <h3>Understand</h3>
+            <p>I learn about your business, audience and what actually needs to improve.</p>
+          </div>
 
-<small>Creative Design</small>
+          <div class="process-step">
+            <span>02 / PLAN</span>
+            <h3>Shape the idea</h3>
+            <p>We turn the requirements into a clear visual and functional direction.</p>
+          </div>
 
-<h3>Campaign Visuals</h3>
+          <div class="process-step">
+            <span>03 / DESIGN</span>
+            <h3>Build the experience</h3>
+            <p>I design the visual system, interface and creative assets.</p>
+          </div>
 
-</div>
+          <div class="process-step">
+            <span>04 / REFINE</span>
+            <h3>Polish & deliver</h3>
+            <p>Details are refined until the final work feels professional and ready to use.</p>
+          </div>
 
-</a>
+        </div>
 
+      </div>
 
+    </section>
 
-<!-- PROJECT 6 -->
 
-<a class="project"
-href="#contact">
+    <!-- ================= CONTACT ================= -->
 
-<img
-src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=85"
-alt="Ecommerce design project"
->
+    <section id="contact">
 
-<div class="project-info">
+      <div class="container">
 
-<small>E-Commerce</small>
+        <div class="contact-box">
 
-<h3>Online Stores</h3>
+          <div class="section-kicker">Have a project?</div>
 
-</div>
+          <h2>
+            Let's turn your idea into
+            something people remember.
+          </h2>
 
-</a>
+          <p>
+            Tell me what you're working on, what you need and where
+            you want to take it. I'll get back to you personally.
+          </p>
 
+          <a
+            class="contact-email"
+            href="mailto:ziyan.creativexol@outlook.com"
+          >
+            ziyan.creativexol@outlook.com
+          </a>
 
-</div>
+          <br>
 
-</section>
+          <a
+            class="btn btn-primary"
+            href="mailto:ziyan.creativexol@outlook.com?subject=Let's%20Talk%20About%20a%20Project"
+          >
+            Let's Talk →
+          </a>
 
+        </div>
 
+      </div>
 
-<!-- ================= SERVICES ================= -->
+    </section>
 
-<section id="services">
+  </main>
 
-<div class="section-top reveal">
 
-<div>
+  <!-- ================= FOOTER ================= -->
 
-<div class="section-label">
-What I Do
-</div>
+  <footer>
 
-<h2 class="section-title">
-Services that<br>
-solve problems.
-</h2>
+    <div class="container footer-inner">
 
-</div>
+      <div class="footer-copy">
+        © 2026 Ziyan Kashif · CreativeXol. All rights reserved.
+      </div>
 
-<p class="section-intro">
-From visual identity to digital systems, I help businesses create experiences that look professional and work clearly.
-</p>
+      <div class="socials">
 
-</div>
+        <a
+          href="https://www.instagram.com/creativexol"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
 
+        <a
+          href="https://www.facebook.com/Creativexol"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
 
+        <a
+          href="https://www.linkedin.com/in/ziyan-kashif-869841276/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
 
-<div class="services reveal">
+        <a
+          href="mailto:ziyan.creativexol@outlook.com"
+        >
+          Email
+        </a>
 
+      </div>
 
-<div class="service">
+    </div>
 
-<span class="service-number">01</span>
+  </footer>
 
-<h3>Website Design</h3>
 
-<p>
-Modern, responsive websites designed around clarity, trust and conversion.
-</p>
+  <!-- ================= SMALL INTERACTION ================= -->
 
-</div>
+  <script>
 
+    // Smoothly close mobile/browser hash jumps
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
 
+      link.addEventListener("click", function(e) {
 
-<div class="service">
+        const target = document.querySelector(this.getAttribute("href"));
 
-<span class="service-number">02</span>
+        if (target) {
+          e.preventDefault();
 
-<h3>UI / UX Design</h3>
-
-<p>
-Clean interfaces and thoughtful user experiences for websites, apps and digital products.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">03</span>
-
-<h3>Brand Identity</h3>
-
-<p>
-Logo systems, visual identity and brand direction that give businesses a recognizable presence.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">04</span>
-
-<h3>Graphic Design</h3>
-
-<p>
-Social media creatives, marketing materials, presentations, print design and business visuals.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">05</span>
-
-<h3>E-Commerce</h3>
-
-<p>
-Professional online stores designed to make products easier to discover and purchase.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">06</span>
-
-<h3>CRM & ERP</h3>
-
-<p>
-Digital business systems that help teams manage customers, operations, workflows and data.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">07</span>
-
-<h3>Video Editing</h3>
-
-<p>
-Short-form content, promotional videos, motion graphics and polished visual storytelling.
-</p>
-
-</div>
-
-
-
-<div class="service">
-
-<span class="service-number">08</span>
-
-<h3>Digital Solutions</h3>
-
-<p>
-Technology-focused solutions designed around a business's specific workflow and goals.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="about reveal">
-
-
-<div>
-
-<div class="section-label">
-About Me
-</div>
-
-<h2 class="about-title">
-Designing with<br>
-purpose.
-</h2>
-
-</div>
-
-
-
-<div class="about-text">
-
-<p>
-I'm Ziyan Kashif, an independent freelance designer and digital solutions specialist working with businesses that want to improve how they look, communicate and operate online.
-</p>
-
-<p>
-My work combines design, technology and business thinking from a brand's first visual impression to the website or digital system behind it.
-</p>
-
-
-<div class="about-points">
-
-<div class="point">
-<strong>Independent</strong>
-Direct communication
-</div>
-
-<div class="point">
-<strong>Creative</strong>
-Design-led thinking
-</div>
-
-<div class="point">
-<strong>Digital</strong>
-Modern solutions
-</div>
-
-<div class="point">
-<strong>Business Focused</strong>
-Design with purpose
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-<div class="reveal">
-
-<div class="section-label">
-Have a project?
-</div>
-
-
-<h2>
-
-Let's make<br>
-
-<span class="gradient-text">something better.</span>
-
-</h2>
-
-
-<p>
-Tell me what you're building, what isn't working, or what you want to improve. I'll get back to you and we can discuss the next step.
-</p>
-
-
-<a
-class="btn btn-primary"
-href="mailto:ziyan.kashif@outlook.com?subject=Project%20Inquiry%20—%20Ziyan%20Kashif"
->
-Start a Conversation
-</a>
-
-
-<br>
-
-
-<a
-class="contact-email"
-href="mailto:ziyan.kashif@outlook.com"
->
-ziyan.kashif@outlook.com
-</a>
-
-
-
-<div class="socials">
-
-<a
-href="https://www.instagram.com/creativexol"
-target="_blank"
-rel="noopener"
->
-Instagram
-</a>
-
-
-<a
-href="https://www.facebook.com/Creativexol"
-target="_blank"
-rel="noopener"
->
-Facebook
-</a>
-
-
-<a
-href="https://github.com/ziyankashif"
-target="_blank"
-rel="noopener"
->
-GitHub
-</a>
-
-
-<a
-href="https://www.linkedin.com/in/ziyan-kashif-869841276/"
-target="_blank"
-rel="noopener"
->
-LinkedIn
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<div class="footer-brand">
-© 2026 <strong>Ziyan Kashif</strong>
-</div>
-
-<div>
-Independent Designer · CreativeXol
-</div>
-
-</footer>
-
-
-
-<script>
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-(entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
         }
+
+      });
+
     });
-},
-{
-    threshold:.12
-}
-);
 
-reveals.forEach(el=>observer.observe(el));
-
-
-/* =========================
-   MOUSE PARALLAX HERO
-========================= */
-
-const card = document.querySelector(".visual-card");
-
-document.addEventListener("mousemove",(e)=>{
-
-    if(window.innerWidth < 900) return;
-
-    const x =
-        (e.clientX / window.innerWidth - .5) * 8;
-
-    const y =
-        (e.clientY / window.innerHeight - .5) * 8;
-
-    card.style.transform =
-        `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg)`;
-
-});
-
-card.addEventListener("mouseleave",()=>{
-    card.style.transform="";
-});
-
-</script>
+  </script>
 
 </body>
 </html>
